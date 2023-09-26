@@ -1,18 +1,14 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.util.Random;
+
 
 public class GameWindow extends JFrame {
 
-    private Random rnd = new Random();
+    private Ball ball;
     private JPanel panel;
     private boolean playing = true;
-    private int radius = 25;
-    private int x = randomNumber(radius * 2, 800 - radius * 2);
-    private int y = randomNumber(radius * 2, 600 - radius * 2);;
-    private int dx = randomNumber(0, 1) == 0 ? 5 : -5;
-    private int dy = randomNumber(0, 1) == 0 ? 5 : -5;;
+
     private BufferedImage bufferedImage;
     private Graphics2D bufferEngine;
     private long before;
@@ -34,6 +30,8 @@ public class GameWindow extends JFrame {
         panel.setFocusable(true);
         panel.setDoubleBuffered(true);
         add(panel);
+
+        ball = new Ball(25);
     }
 
     public void start() {
@@ -66,22 +64,22 @@ public class GameWindow extends JFrame {
     }
 
     private void update() {
-        x += dx;
-        y += dy;
-        if (y <= radius || y >= 600 - radius) {
-            dy *= -1;
+
+        ball.update();
+        if(ball.hasTouchBound()) {
             score += 10;
         }
-        if (x <= radius || x >= 600 - radius) {
-            dx *= -1;
-            score += 10;
-        }
+
     }
 
-    private void drawOnBuffer() {
-        bufferEngine.setPaint(Color.RED);
-        bufferEngine.fillOval(x,y,radius * 2, radius * 2);
 
+
+
+    private void drawOnBuffer() {
+       // bufferEngine.setPaint(Color.RED);
+       // bufferEngine.fillOval(x,y,radius * 2, radius * 2);
+
+        ball.draw(bufferEngine);
 
         bufferEngine.setPaint(Color.white);
         bufferEngine.drawString("Score: " + score,10,20);
@@ -94,7 +92,5 @@ public class GameWindow extends JFrame {
         graphics.dispose();
     }
 
-    private int randomNumber(int min, int max) {
-        return rnd.nextInt((max - min) + 1) + min;
-    }
+
 }
