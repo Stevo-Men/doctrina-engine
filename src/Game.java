@@ -3,11 +3,13 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 
-public class GameWindow extends JFrame {
+public class Game {
+
 
     private Ball ball;
     private JPanel panel;
     private boolean playing = true;
+    private JFrame frame;
 
     private BufferedImage bufferedImage;
     private Graphics2D bufferEngine;
@@ -17,25 +19,17 @@ public class GameWindow extends JFrame {
 
 
 
-    public GameWindow() {
-        setSize(800,600);
-        setLocationRelativeTo(null);
-        setResizable(false);
-        setTitle("My Bouncing Balls");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setState(JFrame.NORMAL);
+    public Game() {
+        initializeFrame();
+        initializePanel();
 
-        panel = new JPanel();
-        panel.setBackground(Color.BLUE);
-        panel.setFocusable(true);
-        panel.setDoubleBuffered(true);
-        add(panel);
+
 
         ball = new Ball(25);
     }
 
     public void start() {
-        setVisible(true);
+        frame.setVisible(true);
         before = System.currentTimeMillis();
         while (playing) {
             bufferedImage = new BufferedImage(800,600,BufferedImage.TYPE_INT_RGB);
@@ -92,5 +86,23 @@ public class GameWindow extends JFrame {
         graphics.dispose();
     }
 
+    private void initializeFrame() {
+        frame = new JFrame();
+
+        frame.setSize(800,600);
+        frame.setLocationRelativeTo(null);
+        frame.setResizable(false);
+        frame.setTitle("My Bouncing Balls");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setState(JFrame.NORMAL);
+    }
+
+    private void initializePanel() {
+        panel = new JPanel();
+        panel.setBackground(Color.BLUE);
+        panel.setFocusable(true);
+        panel.setDoubleBuffered(true);
+        frame.add(panel);
+    }
 
 }
