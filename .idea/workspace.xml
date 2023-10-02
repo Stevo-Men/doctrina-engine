@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refactoring : start method is final">
-      <change afterPath="$PROJECT_DIR$/src/Doctrina/Canvas.java" afterDir="false" />
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refactoring : extract canvas class">
+      <change afterPath="$PROJECT_DIR$/src/Doctrina/GameTime.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BouncingBallGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BouncingBallGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Doctrina/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doctrina/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doctrina/RenderingEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doctrina/RenderingEngine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +59,7 @@
       <workItem from="1695749465447" duration="5919000" />
       <workItem from="1695816133750" duration="25000" />
       <workItem from="1696248206861" duration="871000" />
-      <workItem from="1696249730140" duration="4226000" />
+      <workItem from="1696249730140" duration="5980000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -127,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696252869550</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Refactoring : extract canvas class">
+      <option name="closed" value="true" />
+      <created>1696254043826</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696254043826</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +148,7 @@
     <MESSAGE value="Refactoring : extract initiliazation" />
     <MESSAGE value="Refactoring : extract attend run" />
     <MESSAGE value="Refactoring : start method is final" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring : start method is final" />
+    <MESSAGE value="Refactoring : extract canvas class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring : extract canvas class" />
   </component>
 </project>
