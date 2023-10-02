@@ -7,13 +7,11 @@ public class BouncingBallGame extends Game {
     private Ball ball;
     private int score;
 
-    public BouncingBallGame() {
-        ball = new Ball(25);
-    }
+
 
     @Override
     protected void initiliaze() {
-
+        ball = new Ball(25);
     }
 
     @Override

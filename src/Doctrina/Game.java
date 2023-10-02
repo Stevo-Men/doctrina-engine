@@ -22,6 +22,11 @@ public abstract class Game {
 
     public void start() {
         initiliaze();
+        run();
+
+    }
+
+    private void run() {
         renderingEngine.start();
         updateSyncTime();
         while (playing) {
