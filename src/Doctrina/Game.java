@@ -1,8 +1,6 @@
 package Doctrina;
 
-import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
 
 public abstract class Game {
     private static final int SLEEP = 25;
@@ -14,7 +12,7 @@ public abstract class Game {
 
     protected abstract void update();
 
-    protected abstract void drawOnBuffer(Graphics2D buffer);
+    protected abstract void draw(Canvas canvas);
 
     public Game() {
         renderingEngine = new RenderingEngine();
@@ -31,7 +29,7 @@ public abstract class Game {
         updateSyncTime();
         while (playing) {
             update();
-            drawOnBuffer(renderingEngine.buildBuffer());
+            draw(renderingEngine.buildCanvas());
             renderingEngine.drawOnScreen();
             sleep();
         }

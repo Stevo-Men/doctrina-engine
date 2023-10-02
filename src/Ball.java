@@ -1,3 +1,5 @@
+import Doctrina.Canvas;
+
 import java.awt.*;
 import java.util.Random;
 
@@ -29,9 +31,9 @@ public class Ball {
         }
     }
 
-    public void draw(Graphics2D buffer) {
-        buffer.setPaint(Color.RED);
-        buffer.fillOval(x,y,radius * 2, radius * 2);
+    public void draw(Canvas canvas) {
+        canvas.drawCircle(x,y,radius,Color.RED);
+
     }
 
     public boolean hasTouchBound() {
