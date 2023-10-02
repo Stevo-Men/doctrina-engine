@@ -10,6 +10,7 @@ public abstract class Game {
     private RenderingEngine renderingEngine;
     private boolean playing = true;
     private long before;
+    protected abstract void initiliaze();
 
     protected abstract void update();
 
@@ -20,6 +21,7 @@ public abstract class Game {
     }
 
     public void start() {
+        initiliaze();
         renderingEngine.start();
         updateSyncTime();
         while (playing) {
