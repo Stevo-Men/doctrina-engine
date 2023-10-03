@@ -1,3 +1,5 @@
+package bouncingball;
+
 import Doctrina.Game;
 
 public class App {
