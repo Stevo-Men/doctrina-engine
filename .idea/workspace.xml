@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refractor : Implament quit game">
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refractor : Auto method gamePad listener">
+      <change afterPath="$PROJECT_DIR$/src/Doctrina/StaticEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/footprint/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/footprint/GamePad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/footprint/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/footprint/footprint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/footprint/footprintGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doctrina/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doctrina/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doctrina/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doctrina/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doctrina/RenderingEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doctrina/RenderingEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movingrectangle/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingrectangle/NPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movingrectangle/movingRectangleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingrectangle/movingRectangleGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +51,14 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="footprint" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="Moving Rectangle Game" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="movingrectangle.App" />
+    <configuration name="FootPrint" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="footprint.App" />
       <module name="doctrina-engine" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -71,7 +77,7 @@
       <workItem from="1695816133750" duration="25000" />
       <workItem from="1696248206861" duration="871000" />
       <workItem from="1696249730140" duration="6116000" />
-      <workItem from="1696351064361" duration="6728000" />
+      <workItem from="1696351064361" duration="8414000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -217,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696357368570</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Refractor : Auto method gamePad listener">
+      <option name="closed" value="true" />
+      <created>1696358214864</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1696358214864</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +254,7 @@
     <MESSAGE value="Player able to move" />
     <MESSAGE value="Refractor : extract abstract Controller" />
     <MESSAGE value="Refractor : Implament quit game" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refractor : Implament quit game" />
+    <MESSAGE value="Refractor : Auto method gamePad listener" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refractor : Auto method gamePad listener" />
   </component>
 </project>
