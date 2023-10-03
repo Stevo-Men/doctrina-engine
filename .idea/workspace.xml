@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refractor : Auto method gamePad listener">
-      <change afterPath="$PROJECT_DIR$/src/Doctrina/StaticEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/footprint/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/footprint/GamePad.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/footprint/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/footprint/footprint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/footprint/footprintGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refractor : Extract abstract StaticEntity">
+      <change beforePath="$PROJECT_DIR$/src/Doctrina/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doctrina/Canvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/footprint/footprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/footprint/footprint.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +72,7 @@
       <workItem from="1695816133750" duration="25000" />
       <workItem from="1696248206861" duration="871000" />
       <workItem from="1696249730140" duration="6116000" />
-      <workItem from="1696351064361" duration="8414000" />
+      <workItem from="1696351064361" duration="8740000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -231,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696358214864</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Refractor : Extract abstract StaticEntity">
+      <option name="closed" value="true" />
+      <created>1696360020076</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1696360020076</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +258,7 @@
     <MESSAGE value="Refractor : extract abstract Controller" />
     <MESSAGE value="Refractor : Implament quit game" />
     <MESSAGE value="Refractor : Auto method gamePad listener" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refractor : Auto method gamePad listener" />
+    <MESSAGE value="Refractor : Extract abstract StaticEntity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refractor : Extract abstract StaticEntity" />
   </component>
 </project>
