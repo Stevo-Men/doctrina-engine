@@ -2,11 +2,30 @@ package Doctrina;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.HashMap;
 
 public class Controller implements KeyListener {
 
+    private final HashMap<Integer , Boolean> pressedKeys;
+    public Controller() {
+        pressedKeys = new HashMap<>();
+    }
 
+    protected void bindKey(int keyCode) {
+        pressedKeys.put(keyCode, false);
+    }
 
+    protected void clearKey() {
+        pressedKeys.clear();
+    }
+
+    protected void removeKey(int keyCode) {
+        pressedKeys.remove(keyCode);
+    }
+    public boolean isKeyPressed(int keyCode) {
+        return pressedKeys.containsKey(keyCode)
+                && pressedKeys.get(keyCode);
+    }
     private boolean upPressed;
     private boolean downPressed;
     private boolean leftPressed;
@@ -35,39 +54,19 @@ public class Controller implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-            downPressed = true;
+
+        int keyCode = e.getKeyCode();
+        if (pressedKeys.containsKey(keyCode)) {
+            pressedKeys.put(keyCode, true);
         }
 
-        if (e.getKeyCode() == KeyEvent.VK_UP) {
-            upPressed = true;
-        }
-
-        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            leftPressed = true;
-        }
-
-        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            rightPressed = true;
-        }
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-            downPressed = false;
-        }
-
-        if (e.getKeyCode() == KeyEvent.VK_UP) {
-            upPressed = false;
-        }
-
-        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            leftPressed = false;
-        }
-
-        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            rightPressed = false;
+        int keyCode = e.getKeyCode();
+        if (pressedKeys.containsKey(keyCode)) {
+            pressedKeys.put(keyCode, false);
         }
     }
 }

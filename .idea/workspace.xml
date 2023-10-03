@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Amazing new features">
-      <change afterPath="$PROJECT_DIR$/src/Doctrina/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doctrina/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doctrina/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doctrina/RenderingEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doctrina/RenderingEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movingrectangle/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingrectangle/NPC.java" afterDir="false" />
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Player able to move">
+      <change afterPath="$PROJECT_DIR$/src/Doctrina/MovementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/movingrectangle/GamePad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Doctrina/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doctrina/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/movingrectangle/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingrectangle/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/movingrectangle/movingRectangleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingrectangle/movingRectangleGame.java" afterDir="false" />
     </list>
@@ -71,7 +71,7 @@
       <workItem from="1695816133750" duration="25000" />
       <workItem from="1696248206861" duration="871000" />
       <workItem from="1696249730140" duration="6116000" />
-      <workItem from="1696351064361" duration="4000000" />
+      <workItem from="1696351064361" duration="5775000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -185,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696354400140</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Player able to move">
+      <option name="closed" value="true" />
+      <created>1696355476117</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1696355476117</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +213,7 @@
     <MESSAGE value="Refactoring : Move game to package" />
     <MESSAGE value="Amazing new game" />
     <MESSAGE value="Amazing new features" />
-    <option name="LAST_COMMIT_MESSAGE" value="Amazing new features" />
+    <MESSAGE value="Player able to move" />
+    <option name="LAST_COMMIT_MESSAGE" value="Player able to move" />
   </component>
 </project>

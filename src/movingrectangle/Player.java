@@ -6,28 +6,28 @@ import Doctrina.Controller;
 import java.awt.*;
 
 public class Player {
-private Controller controller;
+private GamePad gamePad;
     private int x;
     private int y;
     private int speed;
-    public Player(Controller controller) {
+    public Player(GamePad gamePad) {
         x = 200;
         y = 200;
         speed = 3;
-        this.controller = controller;
+        this.gamePad = gamePad;
     }
 
     public void update() {
-        if (controller.isDownPressed()){
+        if (gamePad.isDownPressed()){
             y+= speed;
         }
-        if (controller.isUpPressed()){
+        if (gamePad.isUpPressed()){
             y-= speed;
         }
-        if (controller.isLeftPressed()){
+        if (gamePad.isLeftPressed()){
             x-= speed;
         }
-        if (controller.isRightPressed()){
+        if (gamePad.isRightPressed()){
             x+= speed;
         }
 
