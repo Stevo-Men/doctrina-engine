@@ -50,7 +50,7 @@ public class NPC {
         }
     }
     public void draw(Canvas canvas) {
-        canvas.drawRectangle(x,y,20,60, Color.YELLOW);
+        canvas.drawRectangle(x,y,20,20, Color.YELLOW);
     }
 }
 
