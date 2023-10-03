@@ -43,7 +43,7 @@ public class NPC {
 
         } else if (path4) {
             y -= speed;
-            if (y <= 200) {
+            if (y <= 400) {
                 path4 = false;
                 path1 = true;
             }

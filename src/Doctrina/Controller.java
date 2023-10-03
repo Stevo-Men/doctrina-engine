@@ -9,6 +9,7 @@ public class Controller implements KeyListener {
     private final HashMap<Integer , Boolean> pressedKeys;
     public Controller() {
         pressedKeys = new HashMap<>();
+        RenderingEngine.getInstance().addKeyListener(this);
     }
 
     protected void bindKey(int keyCode) {

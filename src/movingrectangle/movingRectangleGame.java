@@ -15,9 +15,7 @@ public class movingRectangleGame extends Game {
 
     @Override
     protected void initiliaze() {
-
     gamePad = new GamePad();
-    super.addKeyListener(gamePad);
     player = new Player(gamePad);
     npc = new NPC();
     }
