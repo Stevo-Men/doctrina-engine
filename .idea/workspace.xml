@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refactoring : Protect GameTime">
-      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bouncingball/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bouncingball/Ball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BouncingBallGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bouncingball/BouncingBallGame.java" afterDir="false" />
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Amazing new game">
+      <change afterPath="$PROJECT_DIR$/src/movingrectangle/NPC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/movingrectangle/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movingrectangle/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingrectangle/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movingrectangle/movingRectangleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingrectangle/movingRectangleGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +50,8 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="Bouncing Ball Game" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="bouncingball.App" />
+    <configuration name="Moving Rectangle Game" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="movingrectangle.App" />
       <module name="doctrina-engine" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -68,7 +70,7 @@
       <workItem from="1695816133750" duration="25000" />
       <workItem from="1696248206861" duration="871000" />
       <workItem from="1696249730140" duration="6116000" />
-      <workItem from="1696351064361" duration="1913000" />
+      <workItem from="1696351064361" duration="3145000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -158,7 +160,23 @@
       <option name="project" value="LOCAL" />
       <updated>1696352934481</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Refactoring : Move game to package">
+      <option name="closed" value="true" />
+      <created>1696353136797</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696353136797</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Amazing new game">
+      <option name="closed" value="true" />
+      <created>1696353294018</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1696353294018</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +193,8 @@
     <MESSAGE value="Refactoring : start method is final" />
     <MESSAGE value="Refactoring : extract canvas class" />
     <MESSAGE value="Refactoring : Protect GameTime" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring : Protect GameTime" />
+    <MESSAGE value="Refactoring : Move game to package" />
+    <MESSAGE value="Amazing new game" />
+    <option name="LAST_COMMIT_MESSAGE" value="Amazing new game" />
   </component>
 </project>
