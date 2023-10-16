@@ -4,36 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refractor : Extract drawRectangle">
-      <change afterPath="$PROJECT_DIR$/src/Tank/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tank/GamePad.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tank/Missile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tank/Tank.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tank/TankGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/doctrina/ControllableEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/doctrina/Direction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doctrina/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Canvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doctrina/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doctrina/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doctrina/GameTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/GameTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doctrina/MovementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/MovementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doctrina/RenderingEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/RenderingEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Doctrina/StaticEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/StaticEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bouncingball/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bouncingball/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bouncingball/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bouncingball/Ball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bouncingball/BouncingBallGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bouncingball/BouncingBallGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/footprint/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/footprint/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/footprint/GamePad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/footprint/GamePad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/footprint/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/footprint/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/footprint/footprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/footprint/footprint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/footprint/footprintGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/footprint/footprintGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movingrectangle/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingrectangle/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movingrectangle/GamePad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingrectangle/GamePad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movingrectangle/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingrectangle/NPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movingrectangle/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingrectangle/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movingrectangle/movingRectangleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingrectangle/movingRectangleGame.java" afterDir="false" />
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : TankGame">
+      <change afterPath="$PROJECT_DIR$/src/doctrina/CollidableRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doctrina/StaticEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/StaticEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +94,7 @@
       <workItem from="1697055001608" duration="12000" />
       <workItem from="1697459161655" duration="2960000" />
       <workItem from="1697462320096" duration="584000" />
-      <workItem from="1697462922810" duration="2228000" />
+      <workItem from="1697462922810" duration="3286000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -291,7 +264,23 @@
       <option name="project" value="LOCAL" />
       <updated>1696360305208</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Feature : TankGame">
+      <option name="closed" value="true" />
+      <created>1697465208378</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1697465208378</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Feature : TankGame">
+      <option name="closed" value="true" />
+      <created>1697465221171</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1697465221171</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,6 +306,7 @@
     <MESSAGE value="Refractor : Auto method gamePad listener" />
     <MESSAGE value="Refractor : Extract abstract StaticEntity" />
     <MESSAGE value="Refractor : Extract drawRectangle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refractor : Extract drawRectangle" />
+    <MESSAGE value="Feature : TankGame" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature : TankGame" />
   </component>
 </project>
