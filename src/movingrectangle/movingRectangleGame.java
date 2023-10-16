@@ -1,23 +1,22 @@
 package movingrectangle;
 
-import Doctrina.Canvas;
-import Doctrina.Controller;
-import Doctrina.Game;
+import doctrina.Canvas;
+import doctrina.Controller;
+import doctrina.Game;
 
 import java.awt.*;
 
-public class movingRectangleGame extends Game {
+public class MovingRectangleGame extends Game {
 
     private GamePad gamePad;
     private Player player;
-    private NPC npc;
-
+    private Npc npc;
 
     @Override
-    protected void initiliaze() {
-    gamePad = new GamePad();
-    player = new Player(gamePad);
-    npc = new NPC();
+    protected void initialize() {
+        gamePad = new GamePad();
+        player = new Player(gamePad);
+        npc = new Npc();
     }
 
     @Override
@@ -25,13 +24,13 @@ public class movingRectangleGame extends Game {
         if (gamePad.isQuitPressed()) {
             stop();
         }
-    player.update();
-    npc.update();
+        player.update();
+        npc.update();
     }
 
     @Override
     protected void draw(Canvas canvas) {
-        canvas.drawRectangle(0,0,800,600, Color.BLUE);
+        canvas.drawRectangle(0, 0, 800, 600, Color.BLUE);
         player.draw(canvas);
         npc.draw(canvas);
     }

@@ -1,9 +1,8 @@
-package Doctrina;
+package doctrina;
 
 import java.util.concurrent.TimeUnit;
 
 public class GameTime {
-
 
     private static final int FPS_TARGET = 60;
 
@@ -11,8 +10,8 @@ public class GameTime {
     private static int fpsCount;
     private static long fpsTimeDelta;
     private static long gameStartTime;
-
     private long syncTime;
+
     public static long getCurrentTime() {
         return System.currentTimeMillis();
     }
@@ -21,12 +20,12 @@ public class GameTime {
         return (currentFps > 0) ? currentFps : fpsCount;
     }
 
-    public static long getElaspsedTime() {
+    public static long getElapsedTime() {
         return System.currentTimeMillis() - gameStartTime;
     }
 
     public static String getElapsedFormattedTime() {
-        long time = getElaspsedTime();
+        long time = getElapsedTime();
         long hours = TimeUnit.MILLISECONDS.toHours(time);
         time -= TimeUnit.HOURS.toMillis(hours);
         long minutes = TimeUnit.MILLISECONDS.toMinutes(time);
@@ -54,10 +53,10 @@ public class GameTime {
 
     private void update() {
         fpsCount++;
-        long currentSecond = TimeUnit.MILLISECONDS.toSeconds(getElaspsedTime());
+        long currentSecond = TimeUnit.MILLISECONDS.toSeconds(getElapsedTime());
         if (fpsTimeDelta != currentSecond) {
             currentFps = fpsCount;
-            fpsCount =0;
+            fpsCount = 0;
         }
         fpsTimeDelta = currentSecond;
     }
@@ -65,16 +64,13 @@ public class GameTime {
     private long getSleepTime() {
         long targetTime = 1000L / FPS_TARGET;
         long sleep = targetTime - (System.currentTimeMillis() - syncTime);
-        if (sleep < 4) {
+        if (sleep < 0) {
             sleep = 4;
         }
         return sleep;
     }
 
-
-
     private void updateSyncTime() {
         syncTime = System.currentTimeMillis();
     }
-
 }

@@ -1,6 +1,6 @@
 package footprint;
 
-import Doctrina.MovementController;
+import doctrina.MovementController;
 
 import java.awt.event.KeyEvent;
 

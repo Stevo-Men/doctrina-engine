@@ -1,4 +1,4 @@
-package Doctrina;
+package doctrina;
 
 import javax.swing.*;
 import java.awt.*;
@@ -7,7 +7,7 @@ import java.awt.image.BufferedImage;
 
 public class RenderingEngine {
 
-    private static  RenderingEngine instance;
+    private static RenderingEngine instance;
     private JFrame frame;
     private JPanel panel;
     private BufferedImage bufferedImage;
@@ -15,12 +15,10 @@ public class RenderingEngine {
 
     public static RenderingEngine getInstance() {
         if (instance == null) {
-            instance= new RenderingEngine();
+            instance = new RenderingEngine();
         }
         return instance;
     }
-
-
 
     public void start() {
         frame.setVisible(true);

@@ -1,12 +1,13 @@
-package Doctrina;
+package doctrina;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.HashMap;
 
-public class Controller implements KeyListener {
+public abstract class Controller implements KeyListener {
 
-    private final HashMap<Integer , Boolean> pressedKeys;
+    private final HashMap<Integer, Boolean> pressedKeys;
+
     public Controller() {
         pressedKeys = new HashMap<>();
         RenderingEngine.getInstance().addKeyListener(this);
@@ -16,36 +17,17 @@ public class Controller implements KeyListener {
         pressedKeys.put(keyCode, false);
     }
 
-    protected void clearKey() {
+    protected void clearKeys() {
         pressedKeys.clear();
     }
 
     protected void removeKey(int keyCode) {
         pressedKeys.remove(keyCode);
     }
+
     public boolean isKeyPressed(int keyCode) {
         return pressedKeys.containsKey(keyCode)
                 && pressedKeys.get(keyCode);
-    }
-    private boolean upPressed;
-    private boolean downPressed;
-    private boolean leftPressed;
-    private boolean rightPressed;
-
-    public boolean isUpPressed() {
-        return upPressed;
-    }
-
-    public boolean isDownPressed() {
-        return downPressed;
-    }
-
-    public boolean isLeftPressed() {
-        return leftPressed;
-    }
-
-    public boolean isRightPressed() {
-        return rightPressed;
     }
 
     @Override
@@ -55,12 +37,10 @@ public class Controller implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-
         int keyCode = e.getKeyCode();
         if (pressedKeys.containsKey(keyCode)) {
             pressedKeys.put(keyCode, true);
         }
-
     }
 
     @Override

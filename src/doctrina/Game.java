@@ -1,18 +1,14 @@
-package Doctrina;
+package doctrina;
 
-import java.awt.*;
 import java.awt.event.KeyListener;
 
 public abstract class Game {
 
-
     private final RenderingEngine renderingEngine;
     private boolean playing = true;
 
-    protected abstract void initiliaze();
-
+    protected abstract void initialize();
     protected abstract void update();
-
     protected abstract void draw(Canvas canvas);
 
     public Game() {
@@ -20,8 +16,9 @@ public abstract class Game {
     }
 
     public final void start() {
-        initiliaze();
+        initialize();
         run();
+        //conclude();
     }
 
     public final void stop() {
@@ -39,8 +36,4 @@ public abstract class Game {
         }
         renderingEngine.stop();
     }
-
-
-
-
 }

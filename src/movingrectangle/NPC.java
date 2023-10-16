@@ -1,10 +1,10 @@
 package movingrectangle;
 
-import Doctrina.Canvas;
+import doctrina.Canvas;
 
 import java.awt.*;
 
-public class NPC {
+public class Npc {
 
     private int x;
     private int y;
@@ -14,7 +14,7 @@ public class NPC {
     private boolean path3 = false;
     private boolean path4 = false;
 
-    public NPC() {
+    public Npc() {
         x = 400;
         y = 200;
         speed = 2;
@@ -39,19 +39,16 @@ public class NPC {
                 path3 = false;
                 path4 = true;
             }
-
-
         } else if (path4) {
-            y -= speed;
-            if (y <= 400) {
+            x += speed;
+            if (x >= 400) {
                 path4 = false;
                 path1 = true;
             }
         }
     }
+
     public void draw(Canvas canvas) {
-        canvas.drawRectangle(x,y,20,20, Color.YELLOW);
+        canvas.drawRectangle(x, y, 10, 10, Color.YELLOW);
     }
 }
-
-

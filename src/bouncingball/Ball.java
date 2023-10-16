@@ -1,13 +1,13 @@
 package bouncingball;
 
-import Doctrina.Canvas;
+import doctrina.Canvas;
 
 import java.awt.*;
 import java.util.Random;
 
 public class Ball {
 
-    private int radius = 25;
+    private final int radius;
     private int x;
     private int y;
     private int velocityX;
@@ -15,10 +15,7 @@ public class Ball {
 
     public Ball(int radius) {
         this.radius = radius;
-        x = randomNumber(radius * 2, 800 - radius * 2);
-        y = randomNumber(radius * 2, 600 - radius * 2);
-        velocityX = randomNumber(0, 1) == 0 ? 5 : -5;
-        velocityY = randomNumber(0, 1) == 0 ? 5 : -5;;
+        initializePosition();
     }
 
     public void update() {
@@ -26,7 +23,6 @@ public class Ball {
         y += velocityY;
         if (hasTouchVerticalBound()) {
             velocityY *= -1;
-
         }
         if (hasTouchHorizontalBound()) {
             velocityX *= -1;
@@ -34,12 +30,12 @@ public class Ball {
     }
 
     public void draw(Canvas canvas) {
-        canvas.drawCircle(x,y,radius,Color.RED);
-
+        canvas.drawCircle(x, y, radius, Color.RED);
     }
 
     public boolean hasTouchBound() {
-        return hasTouchHorizontalBound() || hasTouchVerticalBound();
+        return hasTouchHorizontalBound()
+                || hasTouchVerticalBound();
     }
 
     public boolean hasTouchHorizontalBound() {
@@ -48,6 +44,13 @@ public class Ball {
 
     public boolean hasTouchVerticalBound() {
         return y <= radius || y >= 600 - radius;
+    }
+
+    private void initializePosition() {
+        x = randomNumber(radius * 2, 800 - radius * 2);
+        y = randomNumber(radius * 2, 600 - radius * 2);
+        velocityX = randomNumber(0, 1) == 0 ? 5 : -5;
+        velocityY = randomNumber(0, 1) == 0 ? 5 : -5;
     }
 
     private int randomNumber(int min, int max) {

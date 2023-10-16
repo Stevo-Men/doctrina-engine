@@ -4,9 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refractor : Extract abstract StaticEntity">
-      <change beforePath="$PROJECT_DIR$/src/Doctrina/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doctrina/Canvas.java" afterDir="false" />
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refractor : Extract drawRectangle">
+      <change afterPath="$PROJECT_DIR$/src/Tank/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tank/GamePad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tank/Missile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tank/Tank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tank/TankGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/doctrina/ControllableEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/doctrina/Direction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Doctrina/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Canvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Doctrina/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Doctrina/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Doctrina/GameTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/GameTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Doctrina/MovementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/MovementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Doctrina/RenderingEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/RenderingEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Doctrina/StaticEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/StaticEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bouncingball/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bouncingball/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bouncingball/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bouncingball/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bouncingball/BouncingBallGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bouncingball/BouncingBallGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/footprint/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/footprint/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/footprint/GamePad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/footprint/GamePad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/footprint/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/footprint/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/footprint/footprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/footprint/footprint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/footprint/footprintGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/footprint/footprintGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movingrectangle/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingrectangle/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movingrectangle/GamePad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingrectangle/GamePad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movingrectangle/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingrectangle/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movingrectangle/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingrectangle/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movingrectangle/movingRectangleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingrectangle/movingRectangleGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +66,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/steve/IdeaProjects/CheckSum&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -48,10 +76,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Tank" />
       <recent name="footprint" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Unnamed">
     <configuration name="FootPrint" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="footprint.App" />
       <module name="doctrina-engine" />
@@ -59,6 +88,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tank.App" />
+      <module name="doctrina-engine" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.FootPrint" />
+      <item itemvalue="Application.Unnamed" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -72,7 +112,16 @@
       <workItem from="1695816133750" duration="25000" />
       <workItem from="1696248206861" duration="871000" />
       <workItem from="1696249730140" duration="6116000" />
-      <workItem from="1696351064361" duration="8740000" />
+      <workItem from="1696351064361" duration="8856000" />
+      <workItem from="1696640898886" duration="471000" />
+      <workItem from="1696719267107" duration="65000" />
+      <workItem from="1696885259211" duration="103000" />
+      <workItem from="1696885458623" duration="2537000" />
+      <workItem from="1697053823765" duration="627000" />
+      <workItem from="1697055001608" duration="12000" />
+      <workItem from="1697459161655" duration="2960000" />
+      <workItem from="1697462320096" duration="584000" />
+      <workItem from="1697462922810" duration="2228000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -234,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696360020076</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Refractor : Extract drawRectangle">
+      <option name="closed" value="true" />
+      <created>1696360305208</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1696360305208</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +316,7 @@
     <MESSAGE value="Refractor : Implament quit game" />
     <MESSAGE value="Refractor : Auto method gamePad listener" />
     <MESSAGE value="Refractor : Extract abstract StaticEntity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refractor : Extract abstract StaticEntity" />
+    <MESSAGE value="Refractor : Extract drawRectangle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refractor : Extract drawRectangle" />
   </component>
 </project>

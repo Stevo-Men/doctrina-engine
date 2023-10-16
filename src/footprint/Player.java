@@ -1,43 +1,33 @@
 package footprint;
 
-import Doctrina.Canvas;
+import doctrina.Canvas;
+import doctrina.ControllableEntity;
+
 import java.awt.*;
 
-public class Player {
-private GamePad gamePad;
-    private int x;
-    private int y;
-    private int speed;
-    public Player(GamePad gamePad) {
-        x = 200;
-        y = 200;
-        speed = 3;
-        this.gamePad = gamePad;
+public class Player extends ControllableEntity {
+
+    private final Color color;
+
+    public Player(GamePad gamePad, Color color) {
+        super(gamePad);
+        teleport(200, 200);
+        setDimension(20, 60);
+        setSpeed(3);
+        this.color = color;
     }
 
-    public footprint layFootprint() {
-        return new footprint(x,y);
+    public Footprint layFootprint() {
+        return new Footprint(x, y);
     }
 
+    @Override
     public void update() {
-        if (gamePad.isDownPressed()){
-            y+= speed;
-        }
-        if (gamePad.isUpPressed()){
-            y-= speed;
-        }
-        if (gamePad.isLeftPressed()){
-            x-= speed;
-        }
-        if (gamePad.isRightPressed()){
-            x+= speed;
-        }
-
+        moveWithController();
     }
 
+    @Override
     public void draw(Canvas canvas) {
-        canvas.drawRectangle(x,y,20,20, Color.WHITE);
+        canvas.drawRectangle(this, color);
     }
-
-
 }
