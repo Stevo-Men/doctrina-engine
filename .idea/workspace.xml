@@ -4,52 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : prepare VikingGame">
-      <change afterPath="$PROJECT_DIR$/ressources/Archive/Door.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/Archive/Effect.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/Archive/EnemySpriteSheet2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/Archive/House.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/Archive/House2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/Archive/House3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/Archive/House4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/Archive/Obj1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/Archive/Obj10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/Archive/Outside.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/Archive/Outside2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/Archive/TechsheetB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/Archive/UnderwaterCave.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/Archive/ZombieSheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/Archive/dWkxIWj.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/Archive/hojikasmonsters.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/Archive/lavaboss_zps41f5a17a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/._Archive" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/._demo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/._player.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/._tree.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._Door.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._Effect.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._EnemySpriteSheet2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._House.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._House2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._House3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._House4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._Obj1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._Obj10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._Outside.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._Outside2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._TechsheetB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._UnderwaterCave.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._ZombieSheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._dWkxIWj.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._hojikasmonsters.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._lavaboss_zps41f5a17a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/demo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/player.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/tree.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refactor : Ressources Folder">
+      <change afterPath="$PROJECT_DIR$/src/viking/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctrina-engine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/doctrina-engine.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/TankGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/tank/TankGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/demo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Canvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Canvas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/player.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tree.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/viking/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/viking/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/viking/VikingGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/viking/VikingGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/demo.png" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/Images/demo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/player.png" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/Images/player.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/tree.png" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/Images/tree.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doctrina/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Canvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viking/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viking/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viking/VikingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viking/VikingGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +63,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\steve\IdeaProjects\doctrina-engine\src\viking" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\steve\IdeaProjects\doctrina-engine\ressources\Images" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Tank" />
@@ -160,7 +132,7 @@
       <workItem from="1697462922810" duration="4050000" />
       <workItem from="1697485487228" duration="63000" />
       <workItem from="1697488000978" duration="140000" />
-      <workItem from="1697561039875" duration="4608000" />
+      <workItem from="1697561039875" duration="6787000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -362,7 +334,23 @@
       <option name="project" value="LOCAL" />
       <updated>1697564796101</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Refactor : Ressources Folder">
+      <option name="closed" value="true" />
+      <created>1697565729680</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1697565729680</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Refactor : Ressources Folder">
+      <option name="closed" value="true" />
+      <created>1697565742124</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1697565742124</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,6 +379,7 @@
     <MESSAGE value="Feature : TankGame" />
     <MESSAGE value="Feature : implement collider repository" />
     <MESSAGE value="Feature : prepare VikingGame" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature : prepare VikingGame" />
+    <MESSAGE value="Refactor : Ressources Folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor : Ressources Folder" />
   </component>
 </project>
