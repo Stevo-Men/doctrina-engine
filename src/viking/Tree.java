@@ -1,5 +1,6 @@
 package viking;
 
+import doctrina.Blockade;
 import doctrina.Canvas;
 import doctrina.StaticEntity;
 
@@ -11,14 +12,26 @@ public class Tree extends StaticEntity {
 
     private static final String SPRITE_PATH = "images/tree.png";
     private Image image;
+    private Blockade blockade;
 
-    public Tree() {
+    public Tree(int x, int y) {
+        teleport(x,y);
+        blockade = new Blockade();
+        blockade.setDimension(30,16);
         load();
     }
 
     @Override
     public void draw(Canvas canvas) {
         canvas.drawImage(image, x, y);
+    }
+
+    public void blockadeFromTop() {
+        blockade.teleport(x+16,y+16);
+    }
+
+    public void blockadeFromBottom() {
+        blockade.teleport(x+16,y+48);
     }
 
     private void load() {

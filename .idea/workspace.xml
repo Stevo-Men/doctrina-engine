@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : Viking Moving Animation">
-      <change afterPath="$PROJECT_DIR$/src/viking/Tree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/viking/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/viking/Player.class" afterDir="false" />
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : Tree">
+      <change afterPath="$PROJECT_DIR$/src/doctrina/Blockade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viking/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viking/Tree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/viking/VikingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viking/VikingGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +121,7 @@
       <workItem from="1697462922810" duration="4050000" />
       <workItem from="1697485487228" duration="63000" />
       <workItem from="1697488000978" duration="140000" />
-      <workItem from="1697561039875" duration="7826000" />
+      <workItem from="1697561039875" duration="8449000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -356,7 +355,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697568000173</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Feature : Tree">
+      <option name="closed" value="true" />
+      <created>1697569045638</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1697569045638</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,6 +394,7 @@
     <MESSAGE value="Feature : prepare VikingGame" />
     <MESSAGE value="Refactor : Ressources Folder" />
     <MESSAGE value="Feature : Viking Moving Animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature : Viking Moving Animation" />
+    <MESSAGE value="Feature : Tree" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature : Tree" />
   </component>
 </project>
