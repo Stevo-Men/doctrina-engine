@@ -4,9 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : TankGame">
-      <change afterPath="$PROJECT_DIR$/src/doctrina/CollidableRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doctrina/StaticEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/StaticEntity.java" afterDir="false" />
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : implement collider repository">
+      <change afterPath="$PROJECT_DIR$/src/doctrina/Collision.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/viking/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/viking/GamePad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/viking/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/viking/VikingGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/StaticEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/StaticEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/footprint/Footprint.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/footprint/Footprint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/footprint/FootprintGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/footprint/FootprintGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/movingrectangle/MovingRectangleGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/movingrectangle/MovingRectangleGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/movingrectangle/Npc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/movingrectangle/Npc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/Brick.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/tank/Brick.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/Missile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/tank/Missile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/Tank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/tank/Tank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/TankGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/tank/TankGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tank/Brick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tank/Brick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tank/Missile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tank/Missile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tank/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tank/Tank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,21 +51,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/steve/IdeaProjects/CheckSum&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/steve/IdeaProjects/doctrina-engine/src/viking",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steve\IdeaProjects\doctrina-engine\src\viking" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Tank" />
       <recent name="footprint" />
@@ -94,7 +115,10 @@
       <workItem from="1697055001608" duration="12000" />
       <workItem from="1697459161655" duration="2960000" />
       <workItem from="1697462320096" duration="584000" />
-      <workItem from="1697462922810" duration="3286000" />
+      <workItem from="1697462922810" duration="4050000" />
+      <workItem from="1697485487228" duration="63000" />
+      <workItem from="1697488000978" duration="140000" />
+      <workItem from="1697561039875" duration="3666000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -280,7 +304,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697465221171</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Feature : implement collider repository">
+      <option name="closed" value="true" />
+      <created>1697466332878</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1697466332878</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,6 +339,7 @@
     <MESSAGE value="Refractor : Extract abstract StaticEntity" />
     <MESSAGE value="Refractor : Extract drawRectangle" />
     <MESSAGE value="Feature : TankGame" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature : TankGame" />
+    <MESSAGE value="Feature : implement collider repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature : implement collider repository" />
   </component>
 </project>
