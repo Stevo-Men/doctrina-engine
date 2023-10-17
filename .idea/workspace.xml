@@ -4,27 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : implement collider repository">
-      <change afterPath="$PROJECT_DIR$/src/doctrina/Collision.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/viking/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/viking/GamePad.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/viking/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/viking/VikingGame.java" afterDir="false" />
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : prepare VikingGame">
+      <change afterPath="$PROJECT_DIR$/ressources/Archive/Door.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/Archive/Effect.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/Archive/EnemySpriteSheet2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/Archive/House.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/Archive/House2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/Archive/House3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/Archive/House4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/Archive/Obj1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/Archive/Obj10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/Archive/Outside.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/Archive/Outside2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/Archive/TechsheetB.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/Archive/UnderwaterCave.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/Archive/ZombieSheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/Archive/dWkxIWj.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/Archive/hojikasmonsters.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/Archive/lavaboss_zps41f5a17a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/._Archive" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/._demo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/._player.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/._tree.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._Door.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._Effect.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._EnemySpriteSheet2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._House.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._House2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._House3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._House4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._Obj1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._Obj10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._Outside.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._Outside2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._TechsheetB.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._UnderwaterCave.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._ZombieSheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._dWkxIWj.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._hojikasmonsters.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/__MACOSX/Archive/._lavaboss_zps41f5a17a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/demo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/player.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/tree.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/StaticEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/StaticEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/footprint/Footprint.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/footprint/Footprint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/footprint/FootprintGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/footprint/FootprintGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/movingrectangle/MovingRectangleGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/movingrectangle/MovingRectangleGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/movingrectangle/Npc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/movingrectangle/Npc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/Brick.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/tank/Brick.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/Missile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/tank/Missile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/Tank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/tank/Tank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctrina-engine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/doctrina-engine.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/TankGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/tank/TankGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tank/Brick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tank/Brick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tank/Missile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tank/Missile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tank/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tank/Tank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +82,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "openjdk-20",
     "last_opened_file_path": "C:/Users/steve/IdeaProjects/doctrina-engine/src/viking",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -74,7 +100,14 @@
       <recent name="footprint" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Unnamed">
+  <component name="RunManager" selected="Application.Viking">
+    <configuration name="BouncingBall" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="bouncingball.App" />
+      <module name="doctrina-engine" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FootPrint" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="footprint.App" />
       <module name="doctrina-engine" />
@@ -82,16 +115,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="Tank" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="tank.App" />
       <module name="doctrina-engine" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Viking" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="viking.App" />
+      <module name="doctrina-engine" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Application.BouncingBall" />
+      <item itemvalue="Application.Tank" />
       <item itemvalue="Application.FootPrint" />
-      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Application.Viking" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -118,7 +160,7 @@
       <workItem from="1697462922810" duration="4050000" />
       <workItem from="1697485487228" duration="63000" />
       <workItem from="1697488000978" duration="140000" />
-      <workItem from="1697561039875" duration="3666000" />
+      <workItem from="1697561039875" duration="4608000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -312,7 +354,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697466332878</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Feature : prepare VikingGame">
+      <option name="closed" value="true" />
+      <created>1697564796101</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1697564796101</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,6 +390,7 @@
     <MESSAGE value="Refractor : Extract drawRectangle" />
     <MESSAGE value="Feature : TankGame" />
     <MESSAGE value="Feature : implement collider repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature : implement collider repository" />
+    <MESSAGE value="Feature : prepare VikingGame" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature : prepare VikingGame" />
   </component>
 </project>
