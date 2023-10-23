@@ -11,10 +11,9 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class Player extends ControllableEntity {
-
+    ///
     private static final String SPRITE_PATH = "images/player.png";
-    private static final int ANIMATION_SPEED =8;
-
+    private static final int ANIMATION_SPEED = 8;
 
     private BufferedImage spriteSheet;
     private Image[] rightFrames;
@@ -23,6 +22,7 @@ public class Player extends ControllableEntity {
     private Image[] downFrames;
     private int currentAnimationFrame = 1;
     private int nextFrame = ANIMATION_SPEED;
+    ///
 
     public Player(MovementController controller) {
         super(controller);

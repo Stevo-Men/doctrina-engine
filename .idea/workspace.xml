@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : Tree">
-      <change afterPath="$PROJECT_DIR$/src/doctrina/Blockade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/viking/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viking/Tree.java" afterDir="false" />
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : Tree &amp; Blockade">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/viking/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/viking/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/viking/VikingGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/viking/VikingGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viking/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viking/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/viking/VikingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viking/VikingGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,21 +36,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "openjdk-20",
-    "last_opened_file_path": "C:/Users/steve/IdeaProjects/doctrina-engine/src/viking",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/steve/IdeaProjects/doctrina-engine/src/viking&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\steve\IdeaProjects\doctrina-engine\src\viking" />
@@ -121,7 +123,8 @@
       <workItem from="1697462922810" duration="4050000" />
       <workItem from="1697485487228" duration="63000" />
       <workItem from="1697488000978" duration="140000" />
-      <workItem from="1697561039875" duration="8449000" />
+      <workItem from="1697561039875" duration="8771000" />
+      <workItem from="1698062663110" duration="1659000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -363,14 +366,21 @@
       <option name="project" value="LOCAL" />
       <updated>1697569045638</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Feature : Tree &amp; Blockade">
+      <option name="closed" value="true" />
+      <created>1697569756429</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1697569756429</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Preparation de la fenetre de jeu" />
     <MESSAGE value="Ball is bouncing" />
     <MESSAGE value="Refactoring : Ball Class" />
     <MESSAGE value="Refactoring : Frame and Panel" />
@@ -395,6 +405,7 @@
     <MESSAGE value="Refactor : Ressources Folder" />
     <MESSAGE value="Feature : Viking Moving Animation" />
     <MESSAGE value="Feature : Tree" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature : Tree" />
+    <MESSAGE value="Feature : Tree &amp; Blockade" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature : Tree &amp; Blockade" />
   </component>
 </project>
