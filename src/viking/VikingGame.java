@@ -24,6 +24,17 @@ public class VikingGame extends Game {
         world = new World();
         world.load();
         tree = new Tree(300, 350);
+
+        try {
+            Clip clip = AudioSystem.getClip();
+            AudioInputStream stream = AudioSystem.getAudioInputStream(
+                    this.getClass().getClassLoader().getResourceAsStream("audios/music.wav"));
+            clip.open(stream);
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
+            clip.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -44,7 +55,7 @@ public class VikingGame extends Game {
         }
 
         if (gamePad.isFirePressed() && soundCooldown == 0) {
-            soundCooldown = 100;
+            soundCooldown = 1;
             try {
                     Clip clip = AudioSystem.getClip();
                 AudioInputStream stream = AudioSystem.getAudioInputStream(this.getClass().getClassLoader().getResourceAsStream("audios/fire.wav"));
