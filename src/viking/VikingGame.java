@@ -55,15 +55,8 @@ public class VikingGame extends Game {
         }
 
         if (gamePad.isFirePressed() && soundCooldown == 0) {
-            soundCooldown = 1;
-            try {
-                    Clip clip = AudioSystem.getClip();
-                AudioInputStream stream = AudioSystem.getAudioInputStream(this.getClass().getClassLoader().getResourceAsStream("audios/fire.wav"));
-                clip.open(stream);
-                clip.start();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            soundCooldown--;
+            SoundEffect.FIRE.play();
         }
     }
 
