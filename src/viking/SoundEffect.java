@@ -6,10 +6,12 @@ import javax.sound.sampled.Clip;
 
 public enum SoundEffect {
 
-    FIRE(1);
+    FIRE(100);
+    //MURLOC("audios/murloc.wav");
     private int maxCooldown;
     private int cooldown;
     private String path;
+    private AudioInputStream stream;
 
     SoundEffect(int maxCooldown) {
         this.maxCooldown = maxCooldown;

@@ -19,6 +19,7 @@ public class Tree extends StaticEntity {
         blockade = new Blockade();
         blockade.setDimension(30,16);
         load();
+
     }
 
     @Override

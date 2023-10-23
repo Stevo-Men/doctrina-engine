@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature: Implement Music">
-      <change afterPath="$PROJECT_DIR$/src/viking/SoundEffect.java" afterDir="false" />
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refactor : sound effect enum">
+      <change afterPath="$PROJECT_DIR$/src/doctrina/GameConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/viking/VikingGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/viking/VikingGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/viking/VikingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viking/VikingGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/viking/SoundEffect.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/viking/SoundEffect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viking/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viking/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viking/SoundEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viking/SoundEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viking/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viking/Tree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +125,7 @@
       <workItem from="1697485487228" duration="63000" />
       <workItem from="1697488000978" duration="140000" />
       <workItem from="1697561039875" duration="8771000" />
-      <workItem from="1698062663110" duration="2737000" />
+      <workItem from="1698062663110" duration="3733000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -397,14 +399,21 @@
       <option name="project" value="LOCAL" />
       <updated>1698064661029</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Refactor : sound effect enum">
+      <option name="closed" value="true" />
+      <created>1698065546263</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1698065546263</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactoring : Frame and Panel" />
     <MESSAGE value="Refactoring : extract abstract class" />
     <MESSAGE value="Refactoring : extract initiliazation" />
     <MESSAGE value="Refactoring : extract attend run" />
@@ -429,6 +438,7 @@
     <MESSAGE value="Feature : Tree &amp; Blockade" />
     <MESSAGE value="Feature: Gun Sound Effect" />
     <MESSAGE value="Feature: Implement Music" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: Implement Music" />
+    <MESSAGE value="Refactor : sound effect enum" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor : sound effect enum" />
   </component>
 </project>
