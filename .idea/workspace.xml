@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refactor : sound effect enum">
-      <change afterPath="$PROJECT_DIR$/src/doctrina/GameConfig.java" afterDir="false" />
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refactor : Implement debug">
+      <change afterPath="$PROJECT_DIR$/src/project/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/Bullet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/GamePad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/Tree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/World.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/projectGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/viking/SoundEffect.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/viking/SoundEffect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/viking/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viking/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/viking/SoundEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viking/SoundEffect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/viking/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viking/Tree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/Archive/dWkxIWj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/viking/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/viking/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/viking/Tree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/viking/Tree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/Archive/dWkxIWj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doctrina/GameConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/GameConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,11 +68,12 @@
       <recent name="C:\Users\steve\IdeaProjects\doctrina-engine\ressources\Images" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="project" />
       <recent name="Tank" />
       <recent name="footprint" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Viking">
+  <component name="RunManager" selected="Application.Project ">
     <configuration name="BouncingBall" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="bouncingball.App" />
       <module name="doctrina-engine" />
@@ -74,6 +83,13 @@
     </configuration>
     <configuration name="FootPrint" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="footprint.App" />
+      <module name="doctrina-engine" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project " type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="project.App" />
       <module name="doctrina-engine" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -98,6 +114,7 @@
       <item itemvalue="Application.Tank" />
       <item itemvalue="Application.FootPrint" />
       <item itemvalue="Application.Viking" />
+      <item itemvalue="Application.Project " />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -125,7 +142,10 @@
       <workItem from="1697485487228" duration="63000" />
       <workItem from="1697488000978" duration="140000" />
       <workItem from="1697561039875" duration="8771000" />
-      <workItem from="1698062663110" duration="3733000" />
+      <workItem from="1698062663110" duration="11656000" />
+      <workItem from="1698149357549" duration="990000" />
+      <workItem from="1698158956073" duration="112000" />
+      <workItem from="1698165440162" duration="1015000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -407,14 +427,21 @@
       <option name="project" value="LOCAL" />
       <updated>1698065546263</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Refactor : Implement debug">
+      <option name="closed" value="true" />
+      <created>1698066508537</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1698066508537</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactoring : extract abstract class" />
     <MESSAGE value="Refactoring : extract initiliazation" />
     <MESSAGE value="Refactoring : extract attend run" />
     <MESSAGE value="Refactoring : start method is final" />
@@ -439,6 +466,7 @@
     <MESSAGE value="Feature: Gun Sound Effect" />
     <MESSAGE value="Feature: Implement Music" />
     <MESSAGE value="Refactor : sound effect enum" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor : sound effect enum" />
+    <MESSAGE value="Refactor : Implement debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor : Implement debug" />
   </component>
 </project>
