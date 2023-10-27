@@ -11,6 +11,9 @@ public abstract class MovableEntity extends StaticEntity {
     private int lastY = Integer.MIN_VALUE;
     private boolean moved = false;
 
+
+
+
     public void update() {
         moved = false;
     }
@@ -27,6 +30,8 @@ public abstract class MovableEntity extends StaticEntity {
         lastX = x;
         lastY = y;
     }
+
+
 
     public boolean hasMoved() {
         return moved;

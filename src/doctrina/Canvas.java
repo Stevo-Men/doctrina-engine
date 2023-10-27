@@ -33,6 +33,4 @@ public class Canvas {
     public void drawImage(Image image, int x, int y) {
         graphics.drawImage(image,x,y,null);
     }
-
-
 }

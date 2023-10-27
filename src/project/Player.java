@@ -24,6 +24,7 @@ public class Player extends ControllableEntity {
     ///
 
     private int cooldown = 0;
+    public int worldX, worldY;
 
     public Player(MovementController controller) {
         super(controller);
@@ -31,6 +32,17 @@ public class Player extends ControllableEntity {
         setSpeed(3);
         load();
         teleport(100, 100);
+        worldX = 1;
+        worldY = 1;
+    }
+
+    public Bullet fire() {
+        cooldown = 50;
+        return new Bullet(this);
+    }
+
+    public boolean canFire() {
+        return cooldown == 0;
     }
 
     @Override
@@ -52,6 +64,13 @@ public class Player extends ControllableEntity {
 
     @Override
     public void draw(Canvas canvas) {
+        canvas.drawRectangle(this, Color.GREEN);
+        int cooldownWidth = cooldown * width / 50;
+        canvas.drawRectangle(x, y - 5, cooldownWidth, 2, Color.GREEN);
+        if (hasMoved()) {
+            drawHitBox(canvas);
+        }
+
         if (getDirection() == Direction.RIGHT) {
             canvas.drawImage(rightFrames[currentAnimationFrame], x, y);
         } else if (getDirection() == Direction.LEFT) {
@@ -64,6 +83,8 @@ public class Player extends ControllableEntity {
         if (GameConfig.isDebugEnabled()) {
             drawHitBox(canvas);
         }
+
+
     }
 
     private void load() {
@@ -99,14 +120,5 @@ public class Player extends ControllableEntity {
         upFrames[0] = spriteSheet.getSubimage(0, 96, width, height);
         upFrames[1] = spriteSheet.getSubimage(32, 96, width, height);
         upFrames[2] = spriteSheet.getSubimage(64, 96, width, height);
-    }
-
-    public Bullet fire() {
-        cooldown = 50;
-        return new Bullet(this);
-    }
-
-    public boolean canFire() {
-        return cooldown == 0;
     }
 }

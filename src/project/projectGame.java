@@ -1,21 +1,16 @@
 package project;
-
 import doctrina.*;
-import tank.Brick;
-import tank.Missile;
-
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class projectGame extends Game {
 
     private Player player;
     private GamePad gamePad;
-    private World world;
-    private Tree tree;
     private ArrayList<Bullet> bullets;
     private ArrayList<Obstacle> obstacles;
+    private World world;
+    private Tree tree;
 
 
     @Override
@@ -24,12 +19,11 @@ public class projectGame extends Game {
         gamePad = new GamePad();
         player = new Player(gamePad);
         player.teleport(200, 200);
+        bullets = new ArrayList<>();
         world = new World();
         world.load();
         tree = new Tree(300, 350);
-
         obstacles = new ArrayList<>();
-        bullets = new ArrayList<>();
 
     }
 
@@ -80,8 +74,6 @@ public class projectGame extends Game {
         for (Bullet bullet: bullets) {
             bullet.draw(canvas);
         }
-
-
 
         if (player.getY() < tree.getY() + 52) {
             player.draw(canvas);
