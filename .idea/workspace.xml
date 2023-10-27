@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : Bullet collid with Obstacle">
-      <change afterPath="$PROJECT_DIR$/src/Tank/tank.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/project/Position.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/project/Size.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doctrina/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Canvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/projectGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/projectGame.java" afterDir="false" />
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : Test Map Installation">
+      <change beforePath="$PROJECT_DIR$/ressources/Images/Tech.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +139,7 @@
       <workItem from="1698266195186" duration="620000" />
       <workItem from="1698275382863" duration="410000" />
       <workItem from="1698371776884" duration="552000" />
+      <workItem from="1698429660984" duration="281000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -456,14 +445,21 @@
       <option name="project" value="LOCAL" />
       <updated>1698167502317</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Feature : Test Map Installation">
+      <option name="closed" value="true" />
+      <created>1698429794742</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1698429794742</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactoring : start method is final" />
     <MESSAGE value="Refactoring : extract canvas class" />
     <MESSAGE value="Refactoring : Protect GameTime" />
     <MESSAGE value="Refactoring : Move game to package" />
@@ -488,6 +484,7 @@
     <MESSAGE value="Refactor : Implement debug" />
     <MESSAGE value="Feature : Bullet" />
     <MESSAGE value="Feature : Bullet collid with Obstacle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature : Bullet collid with Obstacle" />
+    <MESSAGE value="Feature : Test Map Installation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature : Test Map Installation" />
   </component>
 </project>
