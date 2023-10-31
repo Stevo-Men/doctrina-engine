@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : Test Map Installation">
-      <change beforePath="$PROJECT_DIR$/ressources/Images/Tech.tsx" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/audios/testMusicIntro.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/doctrina/Screen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/SoundEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/Images/Tech.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/projectGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/projectGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doctrina/RenderingEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/RenderingEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/projectGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/projectGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viking/VikingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viking/VikingGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +48,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/steve/IdeaProjects/doctrina-engine&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/steve/IdeaProjects/doctrina-engine/ressources/audios&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -50,6 +58,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steve\IdeaProjects\doctrina-engine\ressources\audios" />
       <recent name="C:\Users\steve\IdeaProjects\doctrina-engine\src\viking" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -61,7 +70,7 @@
       <recent name="footprint" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Project ">
+  <component name="RunManager" selected="Application.Viking">
     <configuration name="BouncingBall" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="bouncingball.App" />
       <module name="doctrina-engine" />
@@ -140,6 +149,10 @@
       <workItem from="1698275382863" duration="410000" />
       <workItem from="1698371776884" duration="552000" />
       <workItem from="1698429660984" duration="281000" />
+      <workItem from="1698432236240" duration="983000" />
+      <workItem from="1698441842642" duration="1559000" />
+      <workItem from="1698668186171" duration="576000" />
+      <workItem from="1698770160437" duration="3581000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -453,7 +466,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698429794742</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Feature : Test Map Installation">
+      <option name="closed" value="true" />
+      <created>1698432280312</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1698432280312</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Feature : Test Map Installation">
+      <option name="closed" value="true" />
+      <created>1698432290335</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1698432290335</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

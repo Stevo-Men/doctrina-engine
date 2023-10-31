@@ -1,5 +1,9 @@
 package project;
 import doctrina.*;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import java.util.ArrayList;
 
 
@@ -24,6 +28,18 @@ public class projectGame extends Game {
         world.load();
         tree = new Tree(300, 350);
         obstacles = new ArrayList<>();
+
+
+        try {
+            Clip clip = AudioSystem.getClip();
+            AudioInputStream stream = AudioSystem.getAudioInputStream(
+                    this.getClass().getClassLoader().getResourceAsStream("audios/testMusicIntro.wav"));
+            clip.open(stream);
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
+            clip.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
