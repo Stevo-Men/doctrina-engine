@@ -5,6 +5,7 @@ import java.awt.event.KeyListener;
 public abstract class Game {
 
     private final RenderingEngine renderingEngine;
+    private Camera camera;
     private boolean playing = true;
 
     protected abstract void initialize();

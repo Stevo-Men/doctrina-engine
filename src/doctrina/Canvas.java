@@ -25,6 +25,11 @@ public class Canvas {
         graphics.fillOval(x, y, radius * 2, radius * 2);
     }
 
+    public void drawCamera(Camera camera, int width, int height, Paint paint) {
+        graphics.setPaint(paint);
+        graphics.fillRect(camera.x, camera.y, camera.width, camera.height);
+    }
+
     public void drawString(String text, int x, int y, Paint paint) {
         graphics.setPaint(paint);
         graphics.drawString(text, x, y);

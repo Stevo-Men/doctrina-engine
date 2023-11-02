@@ -23,6 +23,8 @@ public class Player extends ControllableEntity {
     private int nextFrame = ANIMATION_SPEED;
     ///
 
+    private Camera camera;
+
     private int cooldown = 0;
     public int worldX, worldY;
 
@@ -34,6 +36,8 @@ public class Player extends ControllableEntity {
         teleport(100, 100);
         worldX = 1;
         worldY = 1;
+       camera = new Camera(this,100,100);
+
     }
 
     public Bullet fire() {
@@ -48,6 +52,7 @@ public class Player extends ControllableEntity {
     @Override
     public void update() {
         super.update();
+        camera.update();
         moveWithController();
         if (hasMoved()) {
             --nextFrame;
@@ -82,6 +87,7 @@ public class Player extends ControllableEntity {
         }
         if (GameConfig.isDebugEnabled()) {
             drawHitBox(canvas);
+            drawCamera(canvas);
         }
 
 

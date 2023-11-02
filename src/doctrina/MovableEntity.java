@@ -7,9 +7,12 @@ public abstract class MovableEntity extends StaticEntity {
     private int speed = 1;
     private Direction direction = Direction.UP;
     private  Collision collision;
-    private int lastX = Integer.MAX_VALUE;
-    private int lastY = Integer.MIN_VALUE;
+    public int lastX = Integer.MAX_VALUE;
+    public int lastY = Integer.MIN_VALUE;
     private boolean moved = false;
+    private ControllableEntity entity;
+    private Camera camera;
+    private RenderingEngine renderingEngine;
 
 
 
@@ -22,6 +25,15 @@ public abstract class MovableEntity extends StaticEntity {
     public MovableEntity() {
         collision = new Collision(this);
     }
+
+    public int getLastX() {
+        return lastX;
+    }
+
+    public int getLastY() {
+        return lastY;
+    }
+
     public void move() {
         int allowedSpeed = collision.getAllowedSpeed(direction);
         x += direction.calculateVelocityX(allowedSpeed);
@@ -68,6 +80,13 @@ public abstract class MovableEntity extends StaticEntity {
         return getBounds();
     }
 
+  public Camera getCamera() {
+        camera = new Camera(entity, width, height );
+       camera.update();
+
+       return camera;
+    }
+
     public int getSpeed() {
         return speed;
     }
@@ -96,6 +115,12 @@ public abstract class MovableEntity extends StaticEntity {
         Color color = new Color(255, 0, 0, 200);
         canvas.drawRectangle(rectangle.x, rectangle.y,
                 rectangle.width, rectangle.height, color);
+    }
+
+    public void drawCamera(Canvas canvas) {
+        Camera camera = getCamera();
+        Color color = new Color(255, 0, 0, 200);
+        canvas.drawCamera(camera, width, height, color);
     }
 
     private Rectangle getUpperHitBox() {

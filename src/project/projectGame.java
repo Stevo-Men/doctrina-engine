@@ -4,6 +4,7 @@ import doctrina.*;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import javax.swing.*;
 import java.util.ArrayList;
 
 
@@ -15,6 +16,8 @@ public class projectGame extends Game {
     private ArrayList<Obstacle> obstacles;
     private World world;
     private Tree tree;
+    private Camera camera;
+
 
 
     @Override
@@ -28,6 +31,9 @@ public class projectGame extends Game {
         world.load();
         tree = new Tree(300, 350);
         obstacles = new ArrayList<>();
+        camera = new Camera(player,150,100);
+
+
 
 
         try {
@@ -49,6 +55,7 @@ public class projectGame extends Game {
             stop();
         }
         player.update();
+
         if (player.getY() < tree.getY() + 52) {
             tree.blockadeFromTop();
         } else {
@@ -87,6 +94,7 @@ public class projectGame extends Game {
         world.draw(canvas);
 
         player.draw(canvas);
+        camera.drawCamera(canvas);
         for (Bullet bullet: bullets) {
             bullet.draw(canvas);
         }
