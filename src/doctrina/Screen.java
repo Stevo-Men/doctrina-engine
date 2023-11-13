@@ -11,10 +11,20 @@ public class Screen {
     private GraphicsDevice device;
     private DisplayMode fullscreenDisplayMode;
     private boolean isFullscreenMode;
+
     public Screen() {
         initializeFrame();
         initializeInvisibleCursor();
         initializeDevice();
+    }
+
+    public void start() {
+        frame.setVisible(true);
+    }
+
+    public void stop() {
+        frame.setVisible(false);
+        frame.dispose();
     }
 
     public void hideCursor() {
@@ -35,8 +45,8 @@ public class Screen {
         if (frameIsVisible) {
             frame.setVisible(true);
         }
-        fullscreenDisplayMode = findClosetDisplayMode(width, height);
-        System.out.println("Fullscren Mode:" + fullscreenDisplayMode.getWidth() + "x" + fullscreenDisplayMode.getHeight());
+        //fullscreenDisplayMode = findClosestDisplayMode(width, height);
+        System.out.println("Fullscreen Mode: " + fullscreenDisplayMode.getWidth() + "x" + fullscreenDisplayMode.getHeight());
     }
 
     public void setPanel(JPanel panel) {
@@ -51,11 +61,11 @@ public class Screen {
         return isFullscreenMode ? fullscreenDisplayMode.getHeight() : frame.getHeight();
     }
 
-    public void fullscreen() {
+    public void toggleFullscreen() {
         if (device.isFullScreenSupported()) {
             device.setFullScreenWindow(frame);
         }
-        //device.setDisplayMode(fullScreenDisplayMode);
+        //device.setDisplayMode(fullscreenDisplayMode);
         frame.setLocationRelativeTo(null);
         isFullscreenMode = true;
     }
@@ -69,26 +79,26 @@ public class Screen {
         isFullscreenMode = false;
     }
 
-    private DisplayMode findClosetDisplayMode(int width, int height) {
+    private DisplayMode findClosestDisplayMode(int width, int height) {
         DisplayMode[] displayModes = device.getDisplayModes();
         int desiredResolution = width * height;
         int[] availableResolutions = new int[displayModes.length];
         for (int i = 0; i < displayModes.length; i++) {
             availableResolutions[i] = displayModes[i].getWidth() * displayModes[i].getHeight();
         }
-        return displayModes[closetIndexOfValue(desiredResolution, availableResolutions)];
+        return displayModes[closestIndexOfValue(desiredResolution, availableResolutions)];
     }
 
-    private int closetIndexOfValue(int value, int[] list) {
-        int closetIndex = 1;
-        for (int i = 0, min = Integer.MIN_VALUE; i < list.length; i++) {
+    private int closestIndexOfValue(int value, int[] list) {
+        int closestIndex = -1;
+        for (int i = 0, min = Integer.MAX_VALUE; i < list.length; ++i) {
             final int difference = Math.abs(list[i] - value);
             if (difference < min) {
                 min = difference;
-                closetIndex = i;
+                closestIndex = i;
             }
         }
-        return closetIndex;
+        return closestIndex;
     }
 
     private void initializeFrame() {
@@ -102,24 +112,16 @@ public class Screen {
         frame.setUndecorated(true);
     }
 
-    public void start() {
-        frame.setVisible(true);
-    }
-
-    public void stop() {
-        frame.setVisible(false);
-        frame.dispose();
-    }
-
- private void initializeInvisibleCursor() {
+    private void initializeInvisibleCursor() {
         Toolkit toolkit = Toolkit.getDefaultToolkit();
-        Point hotSpot = new Point(0,0);
-     BufferedImage cursorImage = new BufferedImage(1,1,BufferedImage.TRANSLUCENT);
-     invisibleCursor = toolkit.createCustomCursor(cursorImage,hotSpot,"InvisibleCursor");
- }
+        Point hotSpot = new Point(0, 0);
+        BufferedImage cursorImage = new BufferedImage(1, 1, BufferedImage.TRANSLUCENT);
+        invisibleCursor = toolkit.createCustomCursor(cursorImage, hotSpot, "InvisibleCursor");
+    }
 
- private void initializeDevice() {
+    private void initializeDevice() {
         device = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+        fullscreenDisplayMode = device.getDisplayMode();
         // windowedDisplayMode = device.getDisplayMode();
- }
+    }
 }

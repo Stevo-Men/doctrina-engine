@@ -1,11 +1,13 @@
 package project;
 import doctrina.*;
+import doctrina.Canvas;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
+import java.util.Map;
 
 
 public class projectGame extends Game {
@@ -17,23 +19,22 @@ public class projectGame extends Game {
     private World world;
     private Tree tree;
     private Camera camera;
+    private Canvas canvas;
+    private static final String MAP_PATH = "images/map_1_test.png";
 
 
 
     @Override
     protected void initialize() {
-        GameConfig.enableDebug();
+
         gamePad = new GamePad();
         player = new Player(gamePad);
-        player.teleport(200, 200);
+        camera = new Camera(player, 100, 100);
+        player.teleport(400, 300);
         bullets = new ArrayList<>();
         world = new World();
-        world.load();
         tree = new Tree(300, 350);
         obstacles = new ArrayList<>();
-        camera = new Camera(player,150,100);
-
-
 
 
         try {
@@ -47,7 +48,10 @@ public class projectGame extends Game {
             e.printStackTrace();
         }
 
+        RenderingEngine.getInstance().getScreen().toggleFullscreen();
+        //RenderingEngine.getInstance().getScreen().hideCursor();
     }
+
 
     @Override
     protected void update() {
@@ -65,6 +69,9 @@ public class projectGame extends Game {
             bullets.add(player.fire());
         }
         player.update();
+        world.update();
+
+
         ArrayList<StaticEntity> killedElements = new ArrayList<>();
 
         for (Bullet bullet : bullets) {
@@ -91,19 +98,22 @@ public class projectGame extends Game {
 
     @Override
     protected void draw(Canvas canvas) {
-        world.draw(canvas);
-
         player.draw(canvas);
-        camera.drawCamera(canvas);
+        world.draw(canvas, camera);
+
+       if (GameConfig.isDebugEnabled()) {
+           camera.drawCamera(canvas);
+       }
+
         for (Bullet bullet: bullets) {
             bullet.draw(canvas);
         }
 
         if (player.getY() < tree.getY() + 52) {
             player.draw(canvas);
-            tree.draw(canvas);
+          //  tree.draw(canvas);
         } else {
-            tree.draw(canvas);
+           // tree.draw(canvas);
             player.draw(canvas);
         }
     }

@@ -21,22 +21,26 @@ public class Player extends ControllableEntity {
     private Image[] downFrames;
     private int currentAnimationFrame = 1;
     private int nextFrame = ANIMATION_SPEED;
+
+    private int worldX;
+    private int worldY;
+
     ///
 
     private Camera camera;
 
     private int cooldown = 0;
-    public int worldX, worldY;
+
 
     public Player(MovementController controller) {
         super(controller);
         setDimension(32, 32);
-        setSpeed(3);
+        setSpeed(2);
         load();
-        teleport(100, 100);
-        worldX = 1;
-        worldY = 1;
-       camera = new Camera(this,100,100);
+       // teleport(100, 100);
+        worldX = 400;
+        worldY = 300;
+        camera = new Camera(this,100,100);
 
     }
 
@@ -52,8 +56,8 @@ public class Player extends ControllableEntity {
     @Override
     public void update() {
         super.update();
-        camera.update();
         moveWithController();
+        camera.updateCamera();
         if (hasMoved()) {
             --nextFrame;
             if (nextFrame == 0) {
@@ -69,26 +73,20 @@ public class Player extends ControllableEntity {
 
     @Override
     public void draw(Canvas canvas) {
-        canvas.drawRectangle(this, Color.GREEN);
+
         int cooldownWidth = cooldown * width / 50;
-        canvas.drawRectangle(x, y - 5, cooldownWidth, 2, Color.GREEN);
-        if (hasMoved()) {
-            drawHitBox(canvas);
-        }
+        canvas.drawRectangle(worldX, worldY - 5, cooldownWidth, 2, Color.GREEN);
 
         if (getDirection() == Direction.RIGHT) {
-            canvas.drawImage(rightFrames[currentAnimationFrame], x, y);
+            canvas.drawImage(rightFrames[currentAnimationFrame], worldX, worldY);
         } else if (getDirection() == Direction.LEFT) {
-            canvas.drawImage(leftFrames[currentAnimationFrame], x, y);
+            canvas.drawImage(leftFrames[currentAnimationFrame], worldX, worldY);
         } else if (getDirection() == Direction.UP) {
-            canvas.drawImage(upFrames[currentAnimationFrame], x, y);
+            canvas.drawImage(upFrames[currentAnimationFrame], worldX, worldY);
         } else if (getDirection() == Direction.DOWN) {
-            canvas.drawImage(downFrames[currentAnimationFrame], x, y);
+            canvas.drawImage(downFrames[currentAnimationFrame], worldX, worldY);
         }
-        if (GameConfig.isDebugEnabled()) {
-            drawHitBox(canvas);
-            drawCamera(canvas);
-        }
+
 
 
     }

@@ -4,22 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Performance : BufferedImage">
-      <change afterPath="$PROJECT_DIR$/src/doctrina/Camera.java" afterDir="false" />
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : Camera entity">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Canvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Canvas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/RenderingEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/RenderingEngine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/StaticEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/StaticEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/World.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/projectGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/projectGame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/viking/VikingGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/viking/VikingGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doctrina/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Camera.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/doctrina/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Canvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doctrina/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doctrina/RenderingEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/RenderingEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doctrina/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doctrina/StaticEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/StaticEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/projectGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/projectGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viking/VikingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viking/VikingGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +165,12 @@
       <workItem from="1698770160437" duration="9528000" />
       <workItem from="1698782278382" duration="4226000" />
       <workItem from="1698848543889" duration="125000" />
-      <workItem from="1698952299355" duration="2123000" />
+      <workItem from="1698952299355" duration="19645000" />
+      <workItem from="1698990515396" duration="1282000" />
+      <workItem from="1699200642600" duration="556000" />
+      <workItem from="1699378944973" duration="9252000" />
+      <workItem from="1699718911704" duration="274000" />
+      <workItem from="1699880752464" duration="2979000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -499,14 +508,21 @@
       <option name="project" value="LOCAL" />
       <updated>1698774144076</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Feature : Camera entity">
+      <option name="closed" value="true" />
+      <created>1698954762915</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1698954762915</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactoring : Protect GameTime" />
     <MESSAGE value="Refactoring : Move game to package" />
     <MESSAGE value="Amazing new game" />
     <MESSAGE value="Amazing new features" />
@@ -531,6 +547,7 @@
     <MESSAGE value="Feature : Bullet collid with Obstacle" />
     <MESSAGE value="Feature : Test Map Installation" />
     <MESSAGE value="Performance : BufferedImage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Performance : BufferedImage" />
+    <MESSAGE value="Feature : Camera entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature : Camera entity" />
   </component>
 </project>

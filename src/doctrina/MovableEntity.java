@@ -19,7 +19,11 @@ public abstract class MovableEntity extends StaticEntity {
 
     public void update() {
         moved = false;
+
+        Camera camera = getCamera();
+        camera.update();
     }
+
 
 
     public MovableEntity() {
@@ -82,10 +86,13 @@ public abstract class MovableEntity extends StaticEntity {
 
   public Camera getCamera() {
         camera = new Camera(entity, width, height );
-       camera.update();
+      // camera.update();
 
        return camera;
     }
+
+
+
 
     public int getSpeed() {
         return speed;

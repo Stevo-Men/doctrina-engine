@@ -4,8 +4,8 @@ import java.awt.*;
 
 public abstract class StaticEntity {
 
-    protected int x;
-    protected int y;
+    public int x;
+    public int y;
     protected int width;
     protected int height;
 
