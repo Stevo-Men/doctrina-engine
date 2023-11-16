@@ -20,6 +20,7 @@ public class projectGame extends Game {
     private Tree tree;
     private Camera camera;
     private Canvas canvas;
+    private Enemy enemy;
 
     private static final String MAP_PATH = "images/map_1_test.png";
 
@@ -36,6 +37,9 @@ public class projectGame extends Game {
         world = new World();
         tree = new Tree(300, 350);
         obstacles = new ArrayList<>();
+        enemy = new Enemy();
+        enemy.teleport(1300,2100);
+
 
 
 
@@ -104,6 +108,7 @@ public class projectGame extends Game {
         player.draw(canvas);
         world.draw(canvas, camera);
         world.drawBorderTest(canvas);
+        enemy.draw(canvas);
 
        if (GameConfig.isDebugEnabled()) {
            camera.drawCamera(canvas);

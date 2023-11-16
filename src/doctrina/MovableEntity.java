@@ -15,6 +15,11 @@ public abstract class MovableEntity extends StaticEntity {
 
 
 
+    public void Camera(ControllableEntity entity, int width, int height) {
+        this.width = width;
+        this.height = height;
+        this.entity = entity;
+    }
 
 
     public void update() {

@@ -8,7 +8,7 @@ import java.awt.*;
 
 public class Camera extends StaticEntity {
 
-    private ControllableEntity entity;
+    private MovableEntity movableEntity;
     public int lastX;
     public int lastY;
     private RenderingEngine renderingEngine;
@@ -32,10 +32,10 @@ public class Camera extends StaticEntity {
         this.y = y;
     }
 
-    public Camera(ControllableEntity entity, int width, int height) {
-        this.entity = entity;
+    public Camera(MovableEntity movableEntity, int width, int height) {
         this.width = width;
         this.height = height;
+        this.movableEntity = movableEntity;
     }
 
 
@@ -53,23 +53,20 @@ public class Camera extends StaticEntity {
     }
 
     public int halfX() {
-       return entity.getX() - 200;
+       return movableEntity.getX() - 200;
     }
 
     public int halfY() {
-        return entity.getY() - 150;
+        return movableEntity.getY() - 150;
     }
 
     public void updateCamera() {
-        lastX = entity.getX();
-        lastY =  entity.getY();
+        lastX = movableEntity.getX();
+        lastY =  movableEntity.getY();
         update();
-
     }
 
     public void update() {
-
-
 
     }
 

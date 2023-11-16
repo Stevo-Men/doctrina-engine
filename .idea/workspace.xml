@@ -4,23 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : Player at center">
-      <change afterPath="$PROJECT_DIR$/src/project/Enemy.java" afterDir="false" />
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refactor : Player Image Frames">
+      <change afterPath="$PROJECT_DIR$/src/doctrina/AnimatedEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Collision$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Collision$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Collision.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Collision.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/Images/0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/Images/map_1_test..csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/Images/map_1_test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/Images/map_1_test.tmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/World.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/projectGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/projectGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/Images/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/Images/map_1_test..csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/Images/map_1_test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/Images/map_1_test.tmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/audios/testMusicIntro.wav" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/audios/testMusicIntro.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/doctrina/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doctrina/Collision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Collision.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/projectGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/projectGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +173,7 @@
       <workItem from="1699967318271" duration="162000" />
       <workItem from="1699982688441" duration="8378000" />
       <workItem from="1700000667582" duration="154000" />
-      <workItem from="1700094582280" duration="3855000" />
+      <workItem from="1700094582280" duration="8996000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -528,14 +527,21 @@
       <option name="project" value="LOCAL" />
       <updated>1699884235108</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Refactor : Player Image Frames">
+      <option name="closed" value="true" />
+      <created>1700099137911</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1700099137912</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Amazing new game" />
     <MESSAGE value="Amazing new features" />
     <MESSAGE value="Player able to move" />
     <MESSAGE value="Refractor : extract abstract Controller" />
@@ -560,6 +566,7 @@
     <MESSAGE value="Performance : BufferedImage" />
     <MESSAGE value="Feature : Camera entity" />
     <MESSAGE value="Feature : Player at center" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature : Player at center" />
+    <MESSAGE value="Refactor : Player Image Frames" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor : Player Image Frames" />
   </component>
 </project>
