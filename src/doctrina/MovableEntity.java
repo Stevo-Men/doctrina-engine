@@ -12,7 +12,7 @@ public abstract class MovableEntity extends StaticEntity {
     private boolean moved = false;
     private ControllableEntity entity;
     private Camera camera;
-    private RenderingEngine renderingEngine;
+
 
 
 
@@ -86,8 +86,6 @@ public abstract class MovableEntity extends StaticEntity {
 
   public Camera getCamera() {
         camera = new Camera(entity, width, height );
-      // camera.update();
-
        return camera;
     }
 

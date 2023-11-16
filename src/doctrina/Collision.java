@@ -1,14 +1,20 @@
 package doctrina;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 public class Collision {
 
     private final MovableEntity entity;
 
+
     public Collision(MovableEntity entity) {
         this.entity = entity;
     }
+
+
 
     public int getAllowedSpeed(Direction direction) {
         switch (direction) {

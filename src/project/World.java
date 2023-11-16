@@ -2,6 +2,7 @@ package project;
 
 import doctrina.Camera;
 import doctrina.Canvas;
+import doctrina.Screen;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -9,12 +10,14 @@ import java.io.IOException;
 
 public class World {
 
-    private static final String MAP_PATH = "images/map_1_lvl1.png";
+    private static final String MAP_PATH = "images/map_1_XL.png";
     private Image background;
     private Camera camera;
     private Player player;
     private Frame frame;
     private GamePad gamePad;
+    boolean nearLeftBorder;
+    private int WorldX,WorldY;
 
 
 
@@ -40,11 +43,20 @@ public class World {
         camera.updateCamera();
         canvas.drawImage(background, player.getX() - camera.getLastX(), player.getY() - camera.getLastY());
 
+
+
     }
 
     public void update() {
 
     }
 
-
+    public void drawBorderTest(Canvas canvas) {
+        camera.update();
+        WorldX = player.getX() - camera.getLastX();
+        WorldY = player.getY() - camera.getLastY();
+        Color color = new Color(255, 181, 0, 200);
+        canvas.drawRectangle(WorldX, WorldY,
+                50, 50, color);
+    }
 }

@@ -64,18 +64,13 @@ public class Camera extends StaticEntity {
         lastX = entity.getX();
         lastY =  entity.getY();
         update();
+
     }
 
     public void update() {
 
-//        int cameraX = entity.getX() - (width / 2);
-//        int cameraY = entity.getY() - (height / 2);
-//
-//        // Adjust the camera's position to ensure it doesn't go beyond game boundaries
-//        // (You can add bounds checking here)
-//
-//        setX(cameraX);
-//        setY(cameraY);
+
+
     }
 
 

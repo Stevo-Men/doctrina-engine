@@ -20,6 +20,7 @@ public class projectGame extends Game {
     private Tree tree;
     private Camera camera;
     private Canvas canvas;
+
     private static final String MAP_PATH = "images/map_1_test.png";
 
 
@@ -30,11 +31,12 @@ public class projectGame extends Game {
         gamePad = new GamePad();
         player = new Player(gamePad);
         camera = new Camera(player, 100, 100);
-        player.teleport(400, 300);
+        player.teleport(1215, 2000);
         bullets = new ArrayList<>();
         world = new World();
         tree = new Tree(300, 350);
         obstacles = new ArrayList<>();
+
 
 
         try {
@@ -72,6 +74,7 @@ public class projectGame extends Game {
         world.update();
 
 
+
         ArrayList<StaticEntity> killedElements = new ArrayList<>();
 
         for (Bullet bullet : bullets) {
@@ -100,6 +103,7 @@ public class projectGame extends Game {
     protected void draw(Canvas canvas) {
         player.draw(canvas);
         world.draw(canvas, camera);
+        world.drawBorderTest(canvas);
 
        if (GameConfig.isDebugEnabled()) {
            camera.drawCamera(canvas);

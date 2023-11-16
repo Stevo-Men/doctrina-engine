@@ -2,46 +2,37 @@ package project;
 
 import doctrina.Canvas;
 import doctrina.*;
-import tank.Missile;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Player extends ControllableEntity {
-    ///
     private static final String SPRITE_PATH = "images/player2.png";
     private static final int ANIMATION_SPEED = 8;
 
     private BufferedImage spriteSheet;
-    private Image[] rightFrames;
-    private Image[] leftFrames;
-    private Image[] upFrames;
-    private Image[] downFrames;
+    private Map<Direction, Image[]> directionFramesMap = new HashMap<>();
     private int currentAnimationFrame = 1;
     private int nextFrame = ANIMATION_SPEED;
 
     private int worldX;
     private int worldY;
 
-    ///
-
     private Camera camera;
-
     private int cooldown = 0;
-
 
     public Player(MovementController controller) {
         super(controller);
         setDimension(32, 32);
         setSpeed(2);
         load();
-       // teleport(100, 100);
         worldX = 400;
         worldY = 300;
-        camera = new Camera(this,100,100);
-
+        camera = new Camera(this, 100, 100);
     }
 
     public Bullet fire() {
@@ -57,38 +48,18 @@ public class Player extends ControllableEntity {
     public void update() {
         super.update();
         moveWithController();
-        camera.updateCamera();
-        if (hasMoved()) {
-            --nextFrame;
-            if (nextFrame == 0) {
-                ++currentAnimationFrame;
-                if (currentAnimationFrame >= leftFrames.length) {
-                    currentAnimationFrame = 0;
-                }
-                nextFrame = ANIMATION_SPEED;
-            }
-        } else {currentAnimationFrame = 1;
-        }
+        handleAnimation();
     }
 
     @Override
     public void draw(Canvas canvas) {
-
+        drawPlayerInfo(canvas);
         int cooldownWidth = cooldown * width / 50;
-        canvas.drawRectangle(worldX, worldY - 5, cooldownWidth, 2, Color.GREEN);
-
-        if (getDirection() == Direction.RIGHT) {
-            canvas.drawImage(rightFrames[currentAnimationFrame], worldX, worldY);
-        } else if (getDirection() == Direction.LEFT) {
-            canvas.drawImage(leftFrames[currentAnimationFrame], worldX, worldY);
-        } else if (getDirection() == Direction.UP) {
-            canvas.drawImage(upFrames[currentAnimationFrame], worldX, worldY);
-        } else if (getDirection() == Direction.DOWN) {
-            canvas.drawImage(downFrames[currentAnimationFrame], worldX, worldY);
+        canvas.drawRectangle(x, y - 5, cooldownWidth, 2, Color.GREEN);
+        if (hasMoved()) {
+            drawHitBox(canvas);
         }
-
-
-
+        drawPlayerImage(canvas);
     }
 
     private void load() {
@@ -100,29 +71,50 @@ public class Player extends ControllableEntity {
         try {
             spriteSheet = ImageIO.read(this.getClass().getClassLoader().getResourceAsStream(SPRITE_PATH));
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Error loading sprite sheet: " + e.getMessage());
         }
     }
 
     private void loadAnimationFrames() {
-        downFrames = new Image[3];
-        downFrames[0] = spriteSheet.getSubimage(0, 0, width, height);
-        downFrames[1] = spriteSheet.getSubimage(32, 0, width, height);
-        downFrames[2] = spriteSheet.getSubimage(64, 0, width, height);
+        directionFramesMap.put(Direction.DOWN, loadFrames(0));
+        directionFramesMap.put(Direction.LEFT, loadFrames(32));
+        directionFramesMap.put(Direction.RIGHT, loadFrames(64));
+        directionFramesMap.put(Direction.UP, loadFrames(96));
+    }
 
-        leftFrames = new Image[3];
-        leftFrames[0] = spriteSheet.getSubimage(0, 32, width, height);
-        leftFrames[1] = spriteSheet.getSubimage(32, 32, width, height);
-        leftFrames[2] = spriteSheet.getSubimage(64, 32, width, height);
+    private Image[] loadFrames(int startY) {
+        Image[] frames = new Image[3];
+        frames[0] = spriteSheet.getSubimage(0, startY, width, height);
+        frames[1] = spriteSheet.getSubimage(32, startY, width, height);
+        frames[2] = spriteSheet.getSubimage(64, startY, width, height);
+        return frames;
+    }
 
-        rightFrames = new Image[3];
-        rightFrames[0] = spriteSheet.getSubimage(0, 64, width, height);
-        rightFrames[1] = spriteSheet.getSubimage(32, 64, width, height);
-        rightFrames[2] = spriteSheet.getSubimage(64, 64, width, height);
+    private void handleAnimation() {
+        if (hasMoved()) {
+            --nextFrame;
+            if (nextFrame == 0) {
+                ++currentAnimationFrame;
+                if (currentAnimationFrame >= directionFramesMap.get(Direction.LEFT).length) {
+                    currentAnimationFrame = 0;
+                }
+                nextFrame = ANIMATION_SPEED;
+            }
+        } else {
+            currentAnimationFrame = 1;
+        }
+    }
 
-        upFrames = new Image[3];
-        upFrames[0] = spriteSheet.getSubimage(0, 96, width, height);
-        upFrames[1] = spriteSheet.getSubimage(32, 96, width, height);
-        upFrames[2] = spriteSheet.getSubimage(64, 96, width, height);
+    private void drawPlayerInfo(Canvas canvas) {
+        canvas.drawRectangle(this, Color.GREEN);
+    }
+
+    private void drawPlayerImage(Canvas canvas) {
+        Direction direction = getDirection();
+        Image[] frames = directionFramesMap.get(direction);
+
+        if (frames != null) {
+            canvas.drawImage(frames[currentAnimationFrame], worldX, worldY);
+        }
     }
 }
