@@ -21,6 +21,8 @@ public class projectGame extends Game {
     private Camera camera;
     private Canvas canvas;
     private Enemy enemy;
+    private int soundCooldown;
+    private MovableEntity movableEntity;
 
     private static final String MAP_PATH = "images/map_1_test.png";
 
@@ -28,17 +30,22 @@ public class projectGame extends Game {
 
     @Override
     protected void initialize() {
-
+       // GameConfig.enableDebug();
         gamePad = new GamePad();
         player = new Player(gamePad);
         camera = new Camera(player, 100, 100);
-        player.teleport(1215, 2000);
+       // player.teleport(1215, 2000);
+        player.teleport(100, 100);
         bullets = new ArrayList<>();
         world = new World();
         tree = new Tree(300, 350);
         obstacles = new ArrayList<>();
-        enemy = new Enemy();
-        enemy.teleport(1300,2100);
+        enemy = new Enemy(1215,2000);
+        enemy.teleport(1215,2000);
+
+
+
+
 
 
 
@@ -54,7 +61,7 @@ public class projectGame extends Game {
             e.printStackTrace();
         }
 
-        RenderingEngine.getInstance().getScreen().toggleFullscreen();
+         RenderingEngine.getInstance().getScreen().toggleFullscreen();
         //RenderingEngine.getInstance().getScreen().hideCursor();
     }
 
@@ -66,16 +73,37 @@ public class projectGame extends Game {
         }
         player.update();
 
+
+        enemy.update();
+
         if (player.getY() < tree.getY() + 52) {
             tree.blockadeFromTop();
         } else {
             tree.blockadeFromBottom();
         }
+
         if (gamePad.isFirePressed() && player.canFire()) {
             bullets.add(player.fire());
         }
-        player.update();
+
+
+        soundCooldown--;
+        if (soundCooldown < 0) {
+            soundCooldown = 100;
+        }
+
+        if (gamePad.isFirePressed() && soundCooldown == 0) {
+            soundCooldown--;
+            SoundEffect.FIRE.play();
+        }
+
+
+
         world.update();
+
+
+
+
 
 
 
@@ -105,26 +133,22 @@ public class projectGame extends Game {
 
     @Override
     protected void draw(Canvas canvas) {
-        player.draw(canvas);
+
         world.draw(canvas, camera);
-        world.drawBorderTest(canvas);
         enemy.draw(canvas);
+        player.draw(canvas);
 
-       if (GameConfig.isDebugEnabled()) {
-           camera.drawCamera(canvas);
-       }
 
-        for (Bullet bullet: bullets) {
+        for (Bullet bullet : bullets) {
             bullet.draw(canvas);
         }
 
-        if (player.getY() < tree.getY() + 52) {
-            player.draw(canvas);
-          //  tree.draw(canvas);
-        } else {
-           // tree.draw(canvas);
-            player.draw(canvas);
+
+        if (GameConfig.isDebugEnabled()) {
+            camera.drawCamera(canvas);
         }
     }
+
+
 }
 

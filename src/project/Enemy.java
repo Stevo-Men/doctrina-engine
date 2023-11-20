@@ -22,12 +22,21 @@ public class Enemy extends MovableEntity {
     private int nextFrame = ANIMATION_SPEED;
     private int worldX;
     private int worldY;
+    private int initialX,initialY;
     private int cooldown = 0;
+    private Camera camera;
 
-    public Enemy() {
+    public Enemy(int initialX, int initialY) {
         setDimension(32, 32);
         setSpeed(3);
         load();
+
+        this.x = initialX;
+        this.y = initialY;
+        this.worldX = x;
+        this.worldY = y;
+        camera = new Camera(this, 100, 100);
+        teleport(initialX, initialY);
     }
 
 
@@ -38,23 +47,26 @@ public class Enemy extends MovableEntity {
     @Override
     public void update() {
         super.update();
+        worldX = x;
+        worldY = y;
         handleAnimation();
+      //  System.out.println("Position + " + x + y );
     }
 
     @Override
     public void draw(Canvas canvas) {
-        drawPlayerInfo(canvas);
+        drawEnemyInfo(canvas);
         int cooldownWidth = cooldown * width / 50;
         canvas.drawRectangle(x, y - 5, cooldownWidth, 2, Color.GREEN);
         if (hasMoved()) {
             drawHitBox(canvas);
         }
-        drawPlayerImage(canvas);
+        drawEnemyImage(canvas);
     }
 
     private void load() {
         loadSpriteSheet();
-        loadAnimationFrames();
+      //  loadAnimationFrames();
     }
 
     private void loadSpriteSheet() {
@@ -95,16 +107,16 @@ public class Enemy extends MovableEntity {
         }
     }
 
-    private void drawPlayerInfo(Canvas canvas) {
+    private void drawEnemyInfo(Canvas canvas) {
         canvas.drawRectangle(this, Color.GREEN);
     }
 
-    private void drawPlayerImage(Canvas canvas) {
+    private void drawEnemyImage(Canvas canvas) {
         Direction direction = getDirection();
         Image[] frames = directionFramesMap.get(direction);
 
         if (frames != null) {
-            canvas.drawImage(frames[currentAnimationFrame], worldX, worldY);
+            canvas.drawImage(frames[currentAnimationFrame], x, y);
         }
     }
 }

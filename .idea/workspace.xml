@@ -4,22 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refactor : Player Image Frames">
-      <change afterPath="$PROJECT_DIR$/src/doctrina/AnimatedEntity.java" afterDir="false" />
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refactor : AnimatedEntity">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/Images/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/Images/map_1_test..csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/Images/map_1_test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/Images/map_1_test.tmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/World.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/projectGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/projectGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/audios/testMusicIntro.wav" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/audios/testMusicIntro.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/doctrina/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Camera.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Bullet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/SoundEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/SoundEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/projectGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/projectGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,7 +169,10 @@
       <workItem from="1699967318271" duration="162000" />
       <workItem from="1699982688441" duration="8378000" />
       <workItem from="1700000667582" duration="154000" />
-      <workItem from="1700094582280" duration="8996000" />
+      <workItem from="1700094582280" duration="12472000" />
+      <workItem from="1700154650620" duration="230000" />
+      <workItem from="1700372614431" duration="1230000" />
+      <workItem from="1700443170725" duration="10226000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -535,14 +534,32 @@
       <option name="project" value="LOCAL" />
       <updated>1700099137912</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Refactor : AnimatedEntity">
+      <option name="closed" value="true" />
+      <created>1700104518808</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1700104518808</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Amazing new features" />
     <MESSAGE value="Player able to move" />
     <MESSAGE value="Refractor : extract abstract Controller" />
     <MESSAGE value="Refractor : Implament quit game" />
@@ -567,6 +584,18 @@
     <MESSAGE value="Feature : Camera entity" />
     <MESSAGE value="Feature : Player at center" />
     <MESSAGE value="Refactor : Player Image Frames" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor : Player Image Frames" />
+    <MESSAGE value="Refactor : AnimatedEntity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor : AnimatedEntity" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/project/Enemy.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

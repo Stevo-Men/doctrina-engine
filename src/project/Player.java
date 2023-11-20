@@ -13,13 +13,13 @@ public class Player extends AnimatedEntity {
     private int cooldown = 0;
     private MovementController movementController;
 
+
     public Player(MovementController controller) {
-        super(32, 32, 2, SPRITE_PATH);
+        super(32, 32, 3, SPRITE_PATH);
         setDimension(32, 32);
-        setSpeed(2);
+        setSpeed(3);
         worldX = 400;
         worldY = 300;
-        camera = new Camera(this, 100, 100);
         this.movementController = controller;
     }
 
@@ -37,17 +37,28 @@ public class Player extends AnimatedEntity {
         super.update();
         moveWithController();
         handleAnimation();
+        cooldown--;
+        if (cooldown < 0) {
+            cooldown = 0;
+        }
+       // System.out.println("Position + " + x + y );
     }
 
     @Override
     public void draw(Canvas canvas) {
-        drawPlayerInfo(canvas);
+
+        canvas.drawRectangle(this, Color.pink);
         int cooldownWidth = cooldown * width / 50;
         canvas.drawRectangle(x, y - 5, cooldownWidth, 2, Color.GREEN);
         if (hasMoved()) {
             drawHitBox(canvas);
         }
         drawPlayerImage(canvas);
+
+        if (GameConfig.isDebugEnabled()) {
+            drawHitBox(canvas);
+            //drawCamera(canvas);
+        }
     }
 
     private void moveWithController() {

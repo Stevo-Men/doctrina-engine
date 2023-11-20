@@ -12,21 +12,20 @@ public abstract class MovableEntity extends StaticEntity {
     private boolean moved = false;
     private ControllableEntity entity;
     private Camera camera;
+    protected int worldX = 400;
+    protected int worldY = 300;
 
 
 
-    public void Camera(ControllableEntity entity, int width, int height) {
-        this.width = width;
-        this.height = height;
-        this.entity = entity;
-    }
+
 
 
     public void update() {
         moved = false;
 
-        Camera camera = getCamera();
-        camera.update();
+
+        camera = new Camera(this,100,100);
+
     }
 
 
@@ -61,7 +60,8 @@ public abstract class MovableEntity extends StaticEntity {
     public void move(Direction direction) {
         this.direction = direction;
         move();
-    }
+
+   }
 
     public void moveUp() {
         move(Direction.UP);

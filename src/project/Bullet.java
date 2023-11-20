@@ -37,18 +37,18 @@ public class Bullet extends MovableEntity {
 
     private void initialize(Player player) {
         if (playerDirection == Direction.RIGHT) {
-            teleport(player.getX() + player.getWidth() + 1,
-                    player.getY() + 15 - 2);
+            teleport(400 + player.getWidth() + 1,
+                    300 + 15 - 2);
             setDimension(8, 4);
         } else if (playerDirection == Direction.LEFT) {
-            teleport(player.getX() - 9, player.getY() + 15 - 2);
+            teleport(400 - 9, 300 + 15 - 2);
             setDimension(8, 4);
         } else if (playerDirection == Direction.DOWN) {
-            teleport(player.getX() + 15 - 2,
-                    player.getY() + player.getHeight() + 1);
+            teleport(400 + 15 - 2,
+                    300 + player.getHeight() + 1);
             setDimension(4, 8);
         } else if (playerDirection == Direction.UP) {
-            teleport(player.getX() + 15 - 2, player.getY() - 9);
+            teleport(400 + 15 - 2, 300 - 9);
             setDimension(4, 8);
         }
     }

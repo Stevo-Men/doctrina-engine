@@ -40,7 +40,6 @@ public class Camera extends StaticEntity {
 
 
     public void drawCamera(Canvas canvas) {
-        screen = new Screen();
         Color color = new Color(0, 38, 255, 200);
         canvas.drawRectangle(x / 2,y / 2,
                 800, 600, color);
@@ -52,23 +51,14 @@ public class Camera extends StaticEntity {
         return x;
     }
 
-    public int halfX() {
-       return movableEntity.getX() - 200;
-    }
 
-    public int halfY() {
-        return movableEntity.getY() - 150;
-    }
-
-    public void updateCamera() {
-        lastX = movableEntity.getX();
-        lastY =  movableEntity.getY();
-        update();
-    }
 
     public void update() {
-
+        lastX = movableEntity.getX();
+        lastY =  movableEntity.getY();
     }
+
+
 
 
     @Override

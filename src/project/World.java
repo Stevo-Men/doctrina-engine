@@ -2,6 +2,7 @@ package project;
 
 import doctrina.Camera;
 import doctrina.Canvas;
+import doctrina.MovableEntity;
 import doctrina.Screen;
 
 import javax.imageio.ImageIO;
@@ -40,7 +41,7 @@ public class World {
 
 
     public void draw(Canvas canvas, Camera camera) {
-        camera.updateCamera();
+        camera.update();
         canvas.drawImage(background, player.getX() - camera.getLastX(), player.getY() - camera.getLastY());
 
 
@@ -51,12 +52,5 @@ public class World {
 
     }
 
-    public void drawBorderTest(Canvas canvas) {
-        camera.update();
-        WorldX = player.getX() - camera.getLastX();
-        WorldY = player.getY() - camera.getLastY();
-        Color color = new Color(255, 181, 0, 200);
-        canvas.drawRectangle(WorldX, WorldY,
-                50, 50, color);
-    }
+
 }

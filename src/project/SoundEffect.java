@@ -6,7 +6,7 @@ import javax.sound.sampled.Clip;
 
 public enum SoundEffect {
 
-    FIRE(100);
+    FIRE(1000);
     //MURLOC("audios/murloc.wav");
     private int maxCooldown;
     private int cooldown;
