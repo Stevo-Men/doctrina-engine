@@ -5,6 +5,8 @@ import java.awt.*;
 public class Canvas {
 
     private final Graphics2D graphics;
+    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+
 
     public Canvas(Graphics2D graphics) {
         this.graphics = graphics;
@@ -13,6 +15,10 @@ public class Canvas {
     public void drawRectangle(int x, int y, int width, int height, Paint paint) {
         graphics.setPaint(paint);
         graphics.fillRect(x, y, width, height);
+    }
+
+    public void translate(int x, int y) {
+        graphics.translate(x, y);
     }
 
     public void drawRectangle(StaticEntity entity, Paint paint) {
@@ -37,6 +43,14 @@ public class Canvas {
 
     public void drawImage(Image image, int x, int y) {
         graphics.drawImage(image,x,y,null);
+    }
+
+    public double getScreenWidth() {
+        return screenSize.getWidth();
+    }
+
+    public double getScreenHeight() {
+        return screenSize.getHeight();
     }
 
 

@@ -1,13 +1,13 @@
 package project;
 import doctrina.*;
 import doctrina.Canvas;
+import math.AABB;
+import math.Vector2f;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import java.awt.*;
 import java.util.ArrayList;
-import java.util.Map;
 
 
 public class projectGame extends Game {
@@ -25,23 +25,34 @@ public class projectGame extends Game {
     private MovableEntity movableEntity;
 
     private static final String MAP_PATH = "images/map_1_test.png";
+    private ArrayList<Target> targets;
+    private Target target;
+    private Camerav2 camerav2;
+    private Screen screen;
 
 
 
     @Override
     protected void initialize() {
-       // GameConfig.enableDebug();
+        GameConfig.enableDebug();
         gamePad = new GamePad();
         player = new Player(gamePad);
-        camera = new Camera(player, 100, 100);
-       // player.teleport(1215, 2000);
-        player.teleport(100, 100);
+       // camera = new Camera(player, 100, 100);
+        screen =new Screen();
+        camerav2 = new Camerav2(new AABB(new Vector2f(-64, -64), (screen.getWidth() + 128)/2, (screen.getHeight() + 128)/2));
+        player.teleport(1215, 2000);
+        //  player.teleport(100, 100);
         bullets = new ArrayList<>();
         world = new World();
         tree = new Tree(300, 350);
         obstacles = new ArrayList<>();
-        enemy = new Enemy(1215,2000);
-        enemy.teleport(1215,2000);
+        enemy = new Enemy(100,100,world);
+        enemy.teleport(100,100);
+        targets = new ArrayList<>();
+        target = new Target(1300,2000);
+        targets.add(new Target(1300, 2000));
+        targets.add(new Target(1400, 2000));
+        targets.add(new Target(1500, 2000));
 
 
 
@@ -75,6 +86,9 @@ public class projectGame extends Game {
 
 
         enemy.update();
+        camerav2.update(player);
+
+
 
         if (player.getY() < tree.getY() + 52) {
             tree.blockadeFromTop();
@@ -103,25 +117,21 @@ public class projectGame extends Game {
 
 
 
-
-
-
-
         ArrayList<StaticEntity> killedElements = new ArrayList<>();
 
         for (Bullet bullet : bullets) {
             bullet.update();
-            for (Obstacle obstacle : obstacles) {
-                if (bullet.hitBoxIntersectWith(obstacle)) {
+            for (Target target : targets) {
+                if (bullet.hitBoxIntersectWith(target)) {
                     killedElements.add(bullet);
-                    killedElements.add(obstacle);
+                    killedElements.add(target);
                 }
             }
         }
 
         for (StaticEntity killedElement : killedElements) {
-            if (killedElement instanceof Obstacle) {
-                obstacles.remove(killedElement);
+            if (killedElement instanceof Target) {
+                targets.remove(killedElement);
             }
             if (killedElement instanceof Bullet) {
                 bullets.remove(killedElement);
@@ -134,18 +144,23 @@ public class projectGame extends Game {
     @Override
     protected void draw(Canvas canvas) {
 
-        world.draw(canvas, camera);
-        enemy.draw(canvas);
+        world.draw(canvas,camerav2);
         player.draw(canvas);
 
+       // enemy.draw(canvas);
+       // enemy2.draw(canvas);
+
+        for (Target target : targets) {
+            target.draw(canvas);
+        }
 
         for (Bullet bullet : bullets) {
             bullet.draw(canvas);
         }
 
-
         if (GameConfig.isDebugEnabled()) {
-            camera.drawCamera(canvas);
+
+
         }
     }
 

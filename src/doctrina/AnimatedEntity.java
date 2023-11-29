@@ -1,4 +1,6 @@
 package doctrina;
+import math.Vector2f;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -17,14 +19,15 @@ public abstract class AnimatedEntity extends MovableEntity {
     protected int worldY;
     protected int cooldown = 0;
 
-    // Added width and height instance variables
+
     protected int width;
     protected int height;
 
-    public AnimatedEntity(int width, int height, int speed, String spritePath) {
+    public AnimatedEntity(int width, int height, int speed,  String spritePath) {
         super();
         this.width = width;  // Set width
         this.height = height;  // Set height
+        position = new Vector2f(0, 0);
         loadSpriteSheet(spritePath);
         loadAnimationFrames();
     }
@@ -62,9 +65,6 @@ public abstract class AnimatedEntity extends MovableEntity {
         }
     }
 
-    protected void drawPlayerInfo(Canvas canvas) {
-        canvas.drawRectangle(this, Color.GREEN);
-    }
 
     protected void drawPlayerImage(Canvas canvas) {
         Direction direction = getDirection();

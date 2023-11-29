@@ -26,17 +26,14 @@ public class Enemy extends MovableEntity {
     private int cooldown = 0;
     private Camera camera;
 
-    public Enemy(int initialX, int initialY) {
+    public Enemy(int initialX, int initialY, World world) {
         setDimension(32, 32);
-        setSpeed(3);
-        load();
-
+        setSpeed(10);
         this.x = initialX;
         this.y = initialY;
         this.worldX = x;
         this.worldY = y;
-        camera = new Camera(this, 100, 100);
-        teleport(initialX, initialY);
+        load();
     }
 
 
@@ -46,18 +43,21 @@ public class Enemy extends MovableEntity {
 
     @Override
     public void update() {
-        super.update();
-        worldX = x;
-        worldY = y;
-        handleAnimation();
-      //  System.out.println("Position + " + x + y );
+
+
+        // Implement enemy behavior here
+        // For example, you might make the enemy move left and right:
+        if (cooldown <= 0) {
+            moveRight(); // Move right
+            cooldown = 50; // Set a cooldown before changing direction again
+        } else {
+            cooldown--;
+        }
     }
 
     @Override
     public void draw(Canvas canvas) {
         drawEnemyInfo(canvas);
-        int cooldownWidth = cooldown * width / 50;
-        canvas.drawRectangle(x, y - 5, cooldownWidth, 2, Color.GREEN);
         if (hasMoved()) {
             drawHitBox(canvas);
         }
@@ -66,7 +66,7 @@ public class Enemy extends MovableEntity {
 
     private void load() {
         loadSpriteSheet();
-      //  loadAnimationFrames();
+       loadAnimationFrames();
     }
 
     private void loadSpriteSheet() {

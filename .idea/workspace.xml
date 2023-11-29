@@ -4,19 +4,108 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refactor : AnimatedEntity">
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : Shooting from player">
+      <change afterPath="$PROJECT_DIR$/src/doctrina/Camerav2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/doctrina/GameObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/games/footprint/Footprint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/games/footprint/FootprintGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/games/movingrectangle/MovingRectangleGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/games/movingrectangle/Npc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/games/tank/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/games/tank/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/games/tank/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/games/tank/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/games/tank/Brick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/games/tank/Missile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/games/tank/Tank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/games/tank/TankGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/games/tank/tank.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/math/AABB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/math/Matrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/math/Vector2f.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/Enemy2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/Target.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/bouncingball/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/bouncingball/Ball.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/bouncingball/BouncingBallGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Canvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Canvas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Direction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Direction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/StaticEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/StaticEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/footprint/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/footprint/Footprint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/footprint/FootprintGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/footprint/GamePad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/footprint/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/movingrectangle/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/movingrectangle/GamePad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/movingrectangle/MovingRectangleGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/movingrectangle/Npc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/movingrectangle/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/Bullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/Bullet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/World.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/projectGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/projectGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doctrina/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/Brick.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/GamePad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/Missile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/Tank.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/TankGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/tank/tank.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/viking/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/viking/GamePad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/viking/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/viking/SoundEffect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/viking/Tree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/viking/VikingGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/viking/World.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tank/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tank/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tank/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tank/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tank/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tank/Brick.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tank/GamePad.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tank/Missile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tank/Tank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tank/TankGame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tank/tank.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bouncingball/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/bouncingball/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bouncingball/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/bouncingball/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bouncingball/BouncingBallGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/bouncingball/BouncingBallGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doctrina/AnimatedEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/AnimatedEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doctrina/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Canvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doctrina/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Direction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Bullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doctrina/StaticEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/StaticEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/footprint/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/footprint/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/footprint/GamePad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/footprint/GamePad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/footprint/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/footprint/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/footprint/footprint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/footprint/footprintGame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movingrectangle/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/movingrectangle/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movingrectangle/GamePad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/movingrectangle/GamePad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movingrectangle/NPC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movingrectangle/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/movingrectangle/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movingrectangle/movingRectangleGame.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/SoundEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/SoundEffect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/projectGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/projectGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viking/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/tank/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viking/GamePad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/tank/GamePad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viking/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viking/SoundEffect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viking/Tree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viking/VikingGame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viking/World.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +121,29 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Stevo-Men&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="503c8308-e9f5-4280-8b7f-8e4c34bf4da2" />
+        <option name="url" value="https://github.com/Stevo-Men/doctrina-engine" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -49,13 +160,17 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;test&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/steve/IdeaProjects/doctrina-engine/ressources/audios&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/steve/IdeaProjects/doctrina-engine/doctrina-engine.iml&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -68,6 +183,7 @@
       <recent name="C:\Users\steve\IdeaProjects\doctrina-engine\ressources\Images" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="doctrina" />
       <recent name="project" />
       <recent name="Tank" />
       <recent name="footprint" />
@@ -75,14 +191,14 @@
   </component>
   <component name="RunManager" selected="Application.Project ">
     <configuration name="BouncingBall" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="bouncingball.App" />
+      <option name="MAIN_CLASS_NAME" value="Games.footprint.bouncingball.App" />
       <module name="doctrina-engine" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="FootPrint" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="footprint.App" />
+      <option name="MAIN_CLASS_NAME" value="games.footprint.App" />
       <module name="doctrina-engine" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -96,14 +212,14 @@
       </method>
     </configuration>
     <configuration name="Tank" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="tank.App" />
+      <option name="MAIN_CLASS_NAME" value="Games.footprint.tank.App" />
       <module name="doctrina-engine" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Viking" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="viking.App" />
+      <option name="MAIN_CLASS_NAME" value="Games.footprint.viking.App" />
       <module name="doctrina-engine" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -172,7 +288,13 @@
       <workItem from="1700094582280" duration="12472000" />
       <workItem from="1700154650620" duration="230000" />
       <workItem from="1700372614431" duration="1230000" />
-      <workItem from="1700443170725" duration="10226000" />
+      <workItem from="1700443170725" duration="13513000" />
+      <workItem from="1700485726113" duration="8590000" />
+      <workItem from="1700879119368" duration="10599000" />
+      <workItem from="1700942442859" duration="111000" />
+      <workItem from="1701116287708" duration="2211000" />
+      <workItem from="1701191942650" duration="13873000" />
+      <workItem from="1701225330646" duration="666000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -542,7 +664,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700104518808</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Feature : Shooting from player">
+      <option name="closed" value="true" />
+      <created>1700455496753</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1700455496754</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,7 +690,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Player able to move" />
     <MESSAGE value="Refractor : extract abstract Controller" />
     <MESSAGE value="Refractor : Implament quit game" />
     <MESSAGE value="Refractor : Auto method gamePad listener" />
@@ -585,17 +714,7 @@
     <MESSAGE value="Feature : Player at center" />
     <MESSAGE value="Refactor : Player Image Frames" />
     <MESSAGE value="Refactor : AnimatedEntity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor : AnimatedEntity" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/project/Enemy.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Feature : Shooting from player" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature : Shooting from player" />
   </component>
 </project>

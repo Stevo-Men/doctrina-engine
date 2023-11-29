@@ -2,6 +2,7 @@ package project;
 
 import doctrina.*;
 import doctrina.Canvas;
+import math.Vector2f;
 
 import java.awt.*;
 
@@ -11,15 +12,23 @@ public class Player extends AnimatedEntity {
 
     private Camera camera;
     private int cooldown = 0;
+    protected int maxHealth = 100;
+    protected int health = 100;
+    protected int damage = 25;
+
+    public boolean xCol = false;
+    public boolean yCol = false;
     private MovementController movementController;
+    private Screen screen;
+
 
 
     public Player(MovementController controller) {
         super(32, 32, 3, SPRITE_PATH);
+//        position.x = this.getPos().x;
+//        position.y = this.getPos().y;
         setDimension(32, 32);
-        setSpeed(3);
-        worldX = 400;
-        worldY = 300;
+        setSpeed(1);
         this.movementController = controller;
     }
 
@@ -35,19 +44,22 @@ public class Player extends AnimatedEntity {
     @Override
     public void update() {
         super.update();
+        worldX = (int) position.x;
+        worldY = (int) position.y;
         moveWithController();
         handleAnimation();
         cooldown--;
         if (cooldown < 0) {
             cooldown = 0;
         }
-       // System.out.println("Position + " + x + y );
+        //System.out.println("Position + " + "X" + getPos().getWorldVariables().x + "Y" + getPos().getWorldVariables().y );
+
     }
 
     @Override
     public void draw(Canvas canvas) {
+        update();
 
-        canvas.drawRectangle(this, Color.pink);
         int cooldownWidth = cooldown * width / 50;
         canvas.drawRectangle(x, y - 5, cooldownWidth, 2, Color.GREEN);
         if (hasMoved()) {
@@ -56,8 +68,7 @@ public class Player extends AnimatedEntity {
         drawPlayerImage(canvas);
 
         if (GameConfig.isDebugEnabled()) {
-            drawHitBox(canvas);
-            //drawCamera(canvas);
+            canvas.drawRectangle((int) getPos().x, (int) getPos().y,20,20, Color.RED);
         }
     }
 
@@ -68,7 +79,6 @@ public class Player extends AnimatedEntity {
         } else if (movementController.isLeftPressed()) {
             move(Direction.LEFT);
         }
-
         if (movementController.isDownPressed()) {
             move(Direction.DOWN);
         } else if (movementController.isUpPressed()) {

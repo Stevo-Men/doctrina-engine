@@ -1,5 +1,7 @@
 package doctrina;
 
+import math.Vector2f;
+
 import java.awt.*;
 
 public abstract class MovableEntity extends StaticEntity {
@@ -12,8 +14,13 @@ public abstract class MovableEntity extends StaticEntity {
     private boolean moved = false;
     private ControllableEntity entity;
     private Camera camera;
-    protected int worldX = 400;
-    protected int worldY = 300;
+
+
+
+    protected float maxSpeed = 4f;
+    protected float acceleration = 2f;
+    protected float deacceleration = 0.3f;
+    protected float force = 25f;
 
 
 
@@ -23,15 +30,13 @@ public abstract class MovableEntity extends StaticEntity {
     public void update() {
         moved = false;
 
-
-        camera = new Camera(this,100,100);
-
     }
 
 
 
     public MovableEntity() {
         collision = new Collision(this);
+        position = new Vector2f(0, 0);
     }
 
     public int getLastX() {
@@ -44,11 +49,11 @@ public abstract class MovableEntity extends StaticEntity {
 
     public void move() {
         int allowedSpeed = collision.getAllowedSpeed(direction);
-        x += direction.calculateVelocityX(allowedSpeed);
-        y += direction.calculateVelocityY(allowedSpeed);
-        moved = (x != lastX || y != lastY);
-        lastX = x;
-        lastY = y;
+        this.position.x += direction.calculateVelocityX(allowedSpeed);
+        this.position.y += direction.calculateVelocityY(allowedSpeed);
+        moved = (position.x != lastX || position.y != lastY);
+        lastX = (int) position.x;
+        lastY = (int) position.y;
     }
 
 
@@ -80,13 +85,12 @@ public abstract class MovableEntity extends StaticEntity {
     }
 
     public Rectangle getHitBox() {
-        switch (direction) {
-            case UP: return getUpperHitBox();
-            case DOWN: return getLowerHitBox();
-            case LEFT: return getLeftHitBox();
-            case RIGHT: return getRightHitBox();
-        }
-        return getBounds();
+        return switch (direction) {
+            case UP -> getUpperHitBox();
+            case DOWN -> getLowerHitBox();
+            case LEFT -> getLeftHitBox();
+            case RIGHT -> getRightHitBox();
+        };
     }
 
   public Camera getCamera() {
@@ -104,6 +108,15 @@ public abstract class MovableEntity extends StaticEntity {
     public void setSpeed(int speed) {
         this.speed = speed;
     }
+
+
+    public void setAcceleration(float f) { acceleration = f; }
+    public void setDeacceleration(float f) { deacceleration = f; }
+
+    public float getDeacceleration() { return deacceleration; }
+    public float getAcceleration() { return acceleration; }
+    public float getMaxSpeed() { return maxSpeed; }
+
 
     public Direction getDirection() {
         return direction;
