@@ -22,11 +22,9 @@ public class projectGame extends Game {
     private Canvas canvas;
     private Enemy enemy;
     private int soundCooldown;
-    private MovableEntity movableEntity;
-
     private static final String MAP_PATH = "images/map_1_test.png";
-    private ArrayList<Target> targets;
-    private Target target;
+    private ArrayList<Enemy> enemies;
+
     private Camerav2 camerav2;
     private Screen screen;
 
@@ -34,27 +32,27 @@ public class projectGame extends Game {
 
     @Override
     protected void initialize() {
-        GameConfig.enableDebug();
+       // GameConfig.enableDebug();
         gamePad = new GamePad();
         player = new Player(gamePad);
-       // camera = new Camera(player, 100, 100);
-        screen =new Screen();
-        camerav2 = new Camerav2(new AABB(new Vector2f(-64, -64), (screen.getWidth() + 128)/2, (screen.getHeight() + 128)/2));
-        player.teleport(1215, 2000);
+        screen = new Screen();
+        camerav2 = new Camerav2(new AABB(new Vector2f(player.x, player.y), 0, 0));
+
+
+        player.teleport(1400, 2000);
+
         //  player.teleport(100, 100);
         bullets = new ArrayList<>();
         world = new World();
         tree = new Tree(300, 350);
         obstacles = new ArrayList<>();
-        enemy = new Enemy(100,100,world);
-        enemy.teleport(100,100);
-        targets = new ArrayList<>();
-        target = new Target(1300,2000);
-        targets.add(new Target(1300, 2000));
-        targets.add(new Target(1400, 2000));
-        targets.add(new Target(1500, 2000));
-
-
+        enemy = new Enemy(300,400);
+        enemy.teleport(300,400);
+        enemies = new ArrayList<>();
+        enemy = new Enemy(1300,2000);
+        enemies.add(new Enemy(1300, 2000));
+        enemies.add(new Enemy(1400, 2000));
+        enemies.add(new Enemy(1500, 2000));
 
 
 
@@ -82,11 +80,13 @@ public class projectGame extends Game {
         if (gamePad.isQuitPressed()) {
             stop();
         }
-        player.update();
 
+
+
+        player.update();
+        camerav2.update(player);
 
         enemy.update();
-        camerav2.update(player);
 
 
 
@@ -113,25 +113,24 @@ public class projectGame extends Game {
 
 
 
-        world.update();
-
-
-
         ArrayList<StaticEntity> killedElements = new ArrayList<>();
 
         for (Bullet bullet : bullets) {
             bullet.update();
-            for (Target target : targets) {
-                if (bullet.hitBoxIntersectWith(target)) {
+            for (Enemy enemy : enemies) {
+                enemy.update();
+                if (bullet.hitBoxIntersectWith(enemy)) {
                     killedElements.add(bullet);
-                    killedElements.add(target);
+                    killedElements.add(enemy);
                 }
             }
         }
 
+
+
         for (StaticEntity killedElement : killedElements) {
-            if (killedElement instanceof Target) {
-                targets.remove(killedElement);
+            if (killedElement instanceof Enemy) {
+                enemies.remove(killedElement);
             }
             if (killedElement instanceof Bullet) {
                 bullets.remove(killedElement);
@@ -147,11 +146,13 @@ public class projectGame extends Game {
         world.draw(canvas,camerav2);
         player.draw(canvas);
 
-       // enemy.draw(canvas);
-       // enemy2.draw(canvas);
 
-        for (Target target : targets) {
-            target.draw(canvas);
+       enemy.draw(canvas);
+
+
+
+        for (Enemy enemy : enemies) {
+            enemy.draw(canvas);
         }
 
         for (Bullet bullet : bullets) {
@@ -159,8 +160,7 @@ public class projectGame extends Game {
         }
 
         if (GameConfig.isDebugEnabled()) {
-
-
+            camerav2.draw(canvas);
         }
     }
 

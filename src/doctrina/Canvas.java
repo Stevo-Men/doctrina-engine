@@ -5,7 +5,7 @@ import java.awt.*;
 public class Canvas {
 
     private final Graphics2D graphics;
-    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+
 
 
     public Canvas(Graphics2D graphics) {
@@ -45,13 +45,8 @@ public class Canvas {
         graphics.drawImage(image,x,y,null);
     }
 
-    public double getScreenWidth() {
-        return screenSize.getWidth();
-    }
 
-    public double getScreenHeight() {
-        return screenSize.getHeight();
-    }
+
 
 
 }

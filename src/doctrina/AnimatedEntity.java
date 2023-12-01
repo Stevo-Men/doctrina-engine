@@ -27,7 +27,7 @@ public abstract class AnimatedEntity extends MovableEntity {
         super();
         this.width = width;  // Set width
         this.height = height;  // Set height
-        position = new Vector2f(0, 0);
+        position = new Vector2f(this.position.x, this.position.y);
         loadSpriteSheet(spritePath);
         loadAnimationFrames();
     }
@@ -70,8 +70,11 @@ public abstract class AnimatedEntity extends MovableEntity {
         Direction direction = getDirection();
         Image[] frames = directionFramesMap.get(direction);
 
+
         if (frames != null) {
-            canvas.drawImage(frames[currentAnimationFrame], worldX, worldY);
+            canvas.drawImage(frames[currentAnimationFrame], (int) this.position.getWorldVariables().x, (int) this.position.getWorldVariables().y);
+            System.out.println("Player Coordinates: x = " + (int) this.position.getWorldVariables().x + ", y = " + (int) this.position.getWorldVariables().y);
+
         }
     }
 }

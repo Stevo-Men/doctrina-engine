@@ -11,6 +11,7 @@ public class Screen {
     private GraphicsDevice device;
     private DisplayMode fullscreenDisplayMode;
     private boolean isFullscreenMode;
+    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
     public Screen() {
         initializeFrame();
@@ -123,5 +124,13 @@ public class Screen {
         device = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
         fullscreenDisplayMode = device.getDisplayMode();
         // windowedDisplayMode = device.getDisplayMode();
+    }
+
+    public int getScreenWidth() {
+        return (int) screenSize.getWidth();
+    }
+
+    public int getScreenHeight() {
+        return (int) screenSize.getHeight();
     }
 }

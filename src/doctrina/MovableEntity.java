@@ -12,8 +12,7 @@ public abstract class MovableEntity extends StaticEntity {
     public int lastX = Integer.MAX_VALUE;
     public int lastY = Integer.MIN_VALUE;
     private boolean moved = false;
-    private ControllableEntity entity;
-    private Camera camera;
+
 
 
 
@@ -65,7 +64,6 @@ public abstract class MovableEntity extends StaticEntity {
     public void move(Direction direction) {
         this.direction = direction;
         move();
-
    }
 
     public void moveUp() {
@@ -93,10 +91,7 @@ public abstract class MovableEntity extends StaticEntity {
         };
     }
 
-  public Camera getCamera() {
-        camera = new Camera(entity, width, height );
-       return camera;
-    }
+
 
 
 
@@ -140,11 +135,7 @@ public abstract class MovableEntity extends StaticEntity {
                 rectangle.width, rectangle.height, color);
     }
 
-    public void drawCamera(Canvas canvas) {
-        Camera camera = getCamera();
-        Color color = new Color(255, 0, 0, 200);
-        canvas.drawCamera(camera, width, height, color);
-    }
+
 
     private Rectangle getUpperHitBox() {
         return new Rectangle(x, y - speed, width, speed);
