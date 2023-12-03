@@ -24,6 +24,11 @@ public abstract class StaticEntity {
         this.y = y;
     }
 
+
+
+
+
+
     public void setDimension(int width, int height) {
         this.width = width;
         this.height = height;

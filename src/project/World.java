@@ -18,6 +18,7 @@ public class World {
     private GamePad gamePad;
     boolean nearLeftBorder;
     public Vector2f map;
+    private Screen screen;
 
 
 
@@ -25,8 +26,11 @@ public class World {
     public World() {
         player = new Player(gamePad);
         load();
+        map.setMapDimensions(background.getWidth(null),background.getHeight(null));
         map = new Vector2f();
-        map.setWorldVariables(0,0);
+        map.setVectorMap(400, 300);
+        screen = new Screen();
+
       //  player.setPosition(-1650, -2300);
     }
 
@@ -56,26 +60,13 @@ public class World {
 
 
 
+
+
+
+
     public void update() {
-        // Calculate the center of the screen
-//        int centerX = (int) (player.position.getWorldVariables().x - 400);
-//        int centerY = (int) (player.position.getWorldVariables().y - 300);
 
 
-        // camerav2.setPos(player.position.getWorldVariables().x - 400, player.position.getWorldVariables().y - 300);
-
-
-        // Calculate the position of the image based on the player's position and camera's position
-//        int imageX = (int) (player.position.getWorldVariables().x - camerav2.getPos().x);
-//        int imageY = (int) (player.position.getWorldVariables().y - camerav2.getPos().y);
-//
-//
-//        // Draw the image on the canvas at the calculated position
-//        canvas.drawImage(background, imageX, imageY);
-
-
-//        int imageX = (int) (player.position.getWorldVariables().x   -  1000 - camerav2.getPos().x);
-//        int imageY = (int) (player.position.getWorldVariables().y   -  1000 - camerav2.getPos().y);
 
     }
 

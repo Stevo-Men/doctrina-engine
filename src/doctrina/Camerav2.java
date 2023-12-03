@@ -32,7 +32,7 @@ public class Camerav2 extends StaticEntity {
     private World world;
     private GamePad gamePad;
     private  Direction playerDirection;
-
+    int screenWidth,  screenHeight;
 
 
 
@@ -40,15 +40,25 @@ public class Camerav2 extends StaticEntity {
 
     public Camerav2(AABB collisionCam) {
         this.collisionCam = collisionCam;
+        screenWidth = 850;
+        screenHeight = 530;
+        setLimit(screenWidth, screenHeight);
 
-        screen = new Screen();
+    }
 
+    public int getWidthLimit() {
+        return widthLimit;
+    }
+
+    public int getHeightLimit() {
+        return heightLimit;
     }
 
     public void setLimit(int widthLimit, int heightLimit) {
-        this.widthLimit = widthLimit;
-        this.heightLimit = heightLimit;
+        collisionCam.setWidth(widthLimit);
+        collisionCam.setHeight(heightLimit);
     }
+
 
     public void setTileSize(int tileSize) {
         this.tileSize = tileSize;
@@ -74,30 +84,33 @@ public class Camerav2 extends StaticEntity {
     public void update(Player player) {
         playerDirection = player.getDirection();
 
-        if (player.hasMoved()) {
+        //target(player);
+
+
+        if (player.hasMoved()  ) {
             switch (playerDirection) {
                 case RIGHT:
-                    collisionCam.getPosition().x  += 1;
-                    player.setPosition((int) (collisionCam.getPosition().x + 400), (int) (collisionCam.getPosition().y +300));
+                    collisionCam.getPosition().x++;
+                    //player.setPosition((int) (collisionCam.getPosition().x + 400), (int) (collisionCam.getPosition().y +300));
                     break;
                 case LEFT:
-                    collisionCam.getPosition().x  -= 1;
-                    player.setPosition((int) (collisionCam.getPosition().x + 400), (int) (collisionCam.getPosition().y +300));
+                    collisionCam.getPosition().x--;
+                    //player.setPosition((int) (collisionCam.getPosition().x + 400), (int) (collisionCam.getPosition().y +300));
                     break;
                 case DOWN:
-                    collisionCam.getPosition().y  += 1;
-                    player.setPosition((int) (collisionCam.getPosition().x + 400), (int) (collisionCam.getPosition().y +300));
+                    collisionCam.getPosition().y++;
+                    //player.setPosition((int) (collisionCam.getPosition().x + 400), (int) (collisionCam.getPosition().y +300));
                     break;
                 case UP:
-                    collisionCam.getPosition().y  -= 1;
-                    player.setPosition((int) (collisionCam.getPosition().x + 400), (int) (collisionCam.getPosition().y +300));
+                    collisionCam.getPosition().y--;
+                  //  player.setPosition((int) (collisionCam.getPosition().x + 400), (int) (collisionCam.getPosition().y +300));
                     break;
             }
 //            if (collisionCam.getPosition().x != player.position.x +) {
 //                collisionCam.getPosition().x = player.position.x;
 //            }
 
-            System.out.println("CollisonCam X: " + collisionCam.getPosition().x + " Y: " + collisionCam.getPosition().y + "Player X :" + player.position.x + " Y: " + player.position.y);
+          //  System.out.println("CollisonCam X: " + collisionCam.getPosition().x + " Y: " + collisionCam.getPosition().y + "Player X :" + player.position.x + " Y: " + player.position.y);
         }
 
     }
@@ -108,18 +121,26 @@ public class Camerav2 extends StaticEntity {
 
 
 
-    public void target(Player player) {
-        this.player = player;
-        if (player != null) {
-            acceleration = player.getAcceleration();
-            deacceleration = player.getDeacceleration();
-            maxSpeed = player.getMaxSpeed();
-        } else {
-            acceleration = 3;
-            deacceleration = 0.3f;
-            maxSpeed = 8;
-        }
-    }
+//    public void target(Player player) {
+//        this.player = player;
+//        playerDirection = player.getDirection();
+//
+//        if (player != null) {
+//            acceleration = player.getAcceleration();
+//            deacceleration = player.getDeacceleration();
+//            maxSpeed = player.getMaxSpeed();
+//
+//            collisionCam.getPosition().x = playerDirection.calculateVelocityX((int) maxSpeed);
+//            collisionCam.getPosition().y = playerDirection.calculateVelocityY((int) maxSpeed);
+//        } else {
+//            position.x += playerDirection.calculateVelocityX((int) maxSpeed);
+//            position.y += playerDirection.calculateVelocityY((int) maxSpeed);
+//
+//            acceleration = 3;
+//            deacceleration = 0.3f;
+//            maxSpeed = 2;
+//        }
+//    }
 
     public void setMaxSpeed(int maxSpeed) {
         this.maxSpeed = maxSpeed;
@@ -141,9 +162,13 @@ public class Camerav2 extends StaticEntity {
             update(player);
         }
 
-        Color color = new Color(255, 0, 0, 113);
-        canvas.drawRectangle((int) collisionCam.getPosition().x, (int) collisionCam.getPosition().y, screen.getScreenWidth(), screen.getScreenHeight(), color);
+        Color color = new Color(255, 0, 0, 39);
+        canvas.drawRectangle((int) collisionCam.getPosition().x, (int) collisionCam.getPosition().y,  screenWidth,  screenHeight, color);
+        System.out.println("Cam X: " + collisionCam.getPosition().x + "Cam Y:" + collisionCam.getPosition().y);
     }
+
+
+
 
 
 

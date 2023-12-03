@@ -28,8 +28,10 @@ public class Player extends AnimatedEntity {
 
     public Player(MovementController controller) {
         super(32, 32, 3, SPRITE_PATH);
-        position.x = 1200;
-        position.y = 2200;
+        position.x = 400;
+        position.y = 300;
+        worldX = 400;
+        worldY = 300;
         setDimension(32, 32);
         setSpeed(1);
         this.movementController = controller;
@@ -68,7 +70,7 @@ public class Player extends AnimatedEntity {
 
 
         int cooldownWidth = cooldown * width / 50;
-        canvas.drawRectangle(x, y - 5, cooldownWidth, 2, Color.GREEN);
+        canvas.drawRectangle((int) position.x, (int) (position.y - 5), cooldownWidth, 2, Color.GREEN);
         if (hasMoved()) {
             drawHitBox(canvas);
         }
@@ -76,7 +78,7 @@ public class Player extends AnimatedEntity {
 
         if (GameConfig.isDebugEnabled()) {
             canvas.drawRectangle((int) getPos().x, (int) getPos().y,20,20, Color.RED);
-          //  System.out.println("pos: " + getPos().x + getPos().y);
+           System.out.println("PLAYER: X: " + getPos().x + "Y: " + getPos().y);
         }
     }
 
@@ -102,9 +104,6 @@ public class Player extends AnimatedEntity {
         directionFramesMap.put(Direction.UP, loadFrames(96));
     }
 
-    public void setPosition(int x, int y) {
-        position.x = x;
-        position.y = y;
-    }
+
 
 }

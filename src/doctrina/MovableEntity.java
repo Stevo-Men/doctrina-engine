@@ -55,6 +55,15 @@ public abstract class MovableEntity extends StaticEntity {
         lastY = (int) position.y;
     }
 
+    public void moveEnemy() {
+        int allowedSpeed = collision.getAllowedSpeed(direction);
+        this.x += direction.calculateVelocityX(allowedSpeed);
+        this.y += direction.calculateVelocityY(allowedSpeed);
+        moved = (x != lastX || y != lastY);
+        lastX = x;
+        lastY = y;
+    }
+
 
 
     public boolean hasMoved() {
@@ -65,6 +74,11 @@ public abstract class MovableEntity extends StaticEntity {
         this.direction = direction;
         move();
    }
+
+    public void moveEnemy(Direction direction) {
+        this.direction = direction;
+        moveEnemy();
+    }
 
     public void moveUp() {
         move(Direction.UP);

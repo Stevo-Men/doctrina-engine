@@ -32,27 +32,25 @@ public class projectGame extends Game {
 
     @Override
     protected void initialize() {
-       // GameConfig.enableDebug();
+       GameConfig.enableDebug();
         gamePad = new GamePad();
         player = new Player(gamePad);
+        world = new World();
         screen = new Screen();
-        camerav2 = new Camerav2(new AABB(new Vector2f(player.x, player.y), 0, 0));
+        camerav2 = new Camerav2(new AABB(new Vector2f(player.x, player.y), 800, 600));
 
 
-        player.teleport(1400, 2000);
+        player.teleport(200, 200);
 
         //  player.teleport(100, 100);
         bullets = new ArrayList<>();
         world = new World();
         tree = new Tree(300, 350);
         obstacles = new ArrayList<>();
-        enemy = new Enemy(300,400);
-        enemy.teleport(300,400);
         enemies = new ArrayList<>();
-        enemy = new Enemy(1300,2000);
-        enemies.add(new Enemy(1300, 2000));
-        enemies.add(new Enemy(1400, 2000));
-        enemies.add(new Enemy(1500, 2000));
+        enemy = new Enemy();
+        enemies.add(new Enemy());
+
 
 
 
@@ -70,7 +68,7 @@ public class projectGame extends Game {
             e.printStackTrace();
         }
 
-         RenderingEngine.getInstance().getScreen().toggleFullscreen();
+        // RenderingEngine.getInstance().getScreen().toggleFullscreen();
         //RenderingEngine.getInstance().getScreen().hideCursor();
     }
 
@@ -86,7 +84,7 @@ public class projectGame extends Game {
         player.update();
         camerav2.update(player);
 
-        enemy.update();
+
 
 
 
@@ -112,13 +110,15 @@ public class projectGame extends Game {
         }
 
 
+        for (Enemy enemy : enemies) {
+            enemy.update();
+        }
 
         ArrayList<StaticEntity> killedElements = new ArrayList<>();
 
         for (Bullet bullet : bullets) {
             bullet.update();
             for (Enemy enemy : enemies) {
-                enemy.update();
                 if (bullet.hitBoxIntersectWith(enemy)) {
                     killedElements.add(bullet);
                     killedElements.add(enemy);
@@ -147,7 +147,7 @@ public class projectGame extends Game {
         player.draw(canvas);
 
 
-       enemy.draw(canvas);
+
 
 
 

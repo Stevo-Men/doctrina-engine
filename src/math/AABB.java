@@ -1,7 +1,5 @@
 package math;
 
-import java.util.ArrayList;
-
 //import doctrina.GameObject;
 
 
@@ -10,44 +8,44 @@ public class AABB {
     private Vector2f position;
     private float xOffset = 0;
     private float yOffset = 0;
-    private float w;
-    private float h;
+    private float width;
+    private float height;
     private float r;
     private int size;
 
     private float surfaceArea;
 
-    public AABB(Vector2f position, int w, int h) {
+    public AABB(Vector2f position, int width, int height) {
         this.position = position;
-        this.w = w;
-        this.h = h;
-        this.surfaceArea = w * h;
+        this.width = width;
+        this.height = this.height;
+        this.surfaceArea = width * this.height;
 
-        size = Math.max(w, h);
+        size = Math.max(width, height);
     }
 
     public AABB(Vector2f pos, int r) {
         this.position = pos;
         this.r = r;
         this.surfaceArea = (float) Math.PI * (r * r);
-
         size = r;
+
     }
 
     public Vector2f getPosition() { return position; }
 
     public float getRadius() { return r; }
     public float getSize() { return size; }
-    public float getWidth() { return w; }
-    public float getHeight() { return h; }
+    public float getWidth() { return width; }
+    public float getHeight() { return height; }
     public float getSurfaceArea() { return surfaceArea; }
 
-    public void setBox(Vector2f pos, int w, int h) {
+    public void setBox(Vector2f pos, int width, int height) {
         this.position = pos;
-        this.w = w;
-        this.h = h;
+        this.width = width;
+        this.height = height;
 
-        size = Math.max(w, h);
+        size = Math.max(width, height);
     }
 
     public void setCircle(Vector2f pos, int r) {
@@ -57,8 +55,8 @@ public class AABB {
         size = r;
     }
 
-    public void setWidth(float f) { w = f; }
-    public void setHeight(float f) { h = f; }
+    public void setWidth(float f) { width = f; }
+    public void setHeight(float f) { height = f; }
 
     public void setXOffset(float f) { xOffset = f; }
     public void setYOffset(float f) { yOffset = f; }
@@ -85,13 +83,13 @@ public class AABB {
     }*/
 
     public boolean collides(float dx, float dy, AABB bBox) {
-        float ax = ((position.x + (xOffset)) + (this.w / 2)) + dx;
-        float ay = ((position.y + (yOffset)) + (this.h / 2)) + dy;
+        float ax = ((position.x + (xOffset)) + (this.width / 2)) + dx;
+        float ay = ((position.y + (yOffset)) + (this.height / 2)) + dy;
         float bx = ((bBox.getPosition().x + (bBox.getXOffset())) + (bBox.getWidth() / 2));
         float by = ((bBox.getPosition().y + (bBox.getYOffset())) + (bBox.getHeight() / 2));
 
-        if (Math.abs(ax - bx) < (this.w / 2) + (bBox.getWidth() / 2)) {
-            if (Math.abs(ay - by) < (this.h / 2) + (bBox.getHeight() / 2)) {
+        if (Math.abs(ax - bx) < (this.width / 2) + (bBox.getWidth() / 2)) {
+            if (Math.abs(ay - by) < (this.height / 2) + (bBox.getHeight() / 2)) {
                 return true;
             }
         }
@@ -102,8 +100,8 @@ public class AABB {
     public boolean inside(int xp, int yp) {
         if(xp == -1 || yp == - 1) return false;
 
-        int wTemp = (int) this.w;
-        int hTemp = (int) this.h;
+        int wTemp = (int) this.width;
+        int hTemp = (int) this.height;
         int x = (int) this.position.x;
         int y = (int) this.position.y;
 
@@ -170,8 +168,8 @@ public class AABB {
         float minX = Math.min(position.x, other.getPosition().x);
         float minY = Math.min(position.y, other.getPosition().y);
 
-        int maxW = (int) Math.max(w, other.getWidth());
-        int maxH = (int) Math.max(h, other.getHeight());
+        int maxW = (int) Math.max(width, other.getWidth());
+        int maxH = (int) Math.max(height, other.getHeight());
 
         Vector2f pos = new Vector2f(minX, minY);
         return new AABB(pos, maxW, maxH);
@@ -181,8 +179,8 @@ public class AABB {
 
         String x = Float.toString(position.x);
         String y = Float.toString(position.y);
-        String w = Float.toString(this.w);
-        String h = Float.toString(this.h);
+        String w = Float.toString(this.width);
+        String h = Float.toString(this.height);
 
         return "{" + x + ", " + y + " : " + w + ", " + h + "}";
     }

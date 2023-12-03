@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refactor : Camera Version2">
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : Bullets &amp; Enemies">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Canvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Canvas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/Bullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/Bullet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/World.class" afterDir="false" />
@@ -16,11 +14,13 @@
       <change beforePath="$PROJECT_DIR$/src/doctrina/AnimatedEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/AnimatedEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/doctrina/Camerav2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Camerav2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/doctrina/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Canvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doctrina/CollidableRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/CollidableRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doctrina/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doctrina/StaticEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/StaticEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/AABB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/AABB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/Vector2f.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/Vector2f.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Bullet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/Enemy2.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/projectGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/projectGame.java" afterDir="false" />
@@ -88,7 +88,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -214,7 +214,10 @@
       <workItem from="1701191942650" duration="13873000" />
       <workItem from="1701225330646" duration="6672000" />
       <workItem from="1701283842710" duration="12927000" />
-      <workItem from="1701376267287" duration="12070000" />
+      <workItem from="1701376267287" duration="12229000" />
+      <workItem from="1701450702032" duration="29333000" />
+      <workItem from="1701559654355" duration="4788000" />
+      <workItem from="1701630533502" duration="9302000" />
     </task>
     <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
       <option name="closed" value="true" />
@@ -600,7 +603,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701226077842</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Feature : Bullets &amp; Enemies">
+      <option name="closed" value="true" />
+      <created>1701415402893</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1701415402893</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -618,7 +629,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refractor : Implament quit game" />
     <MESSAGE value="Refractor : Auto method gamePad listener" />
     <MESSAGE value="Refractor : Extract abstract StaticEntity" />
     <MESSAGE value="Refractor : Extract drawRectangle" />
@@ -643,6 +653,22 @@
     <MESSAGE value="Refactor : AnimatedEntity" />
     <MESSAGE value="Feature : Shooting from player" />
     <MESSAGE value="Refactor : Camera Version2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor : Camera Version2" />
+    <MESSAGE value="Feature : Bullets &amp; Enemies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature : Bullets &amp; Enemies" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/project/projectGame.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

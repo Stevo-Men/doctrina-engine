@@ -8,6 +8,8 @@ public class Vector2f {
 
     public static float worldX;
     public static float worldY;
+    public static float dimensionX;
+    public static float dimensionY;
 
     public Vector2f() {
         x = 0;
@@ -39,9 +41,25 @@ public class Vector2f {
         this.y = y;
     }
 
+    public void setVectorMap(float x, float y) {
+        this.x = -x;
+        this.y = -x;
+    }
+
     public static void setWorldVariables(float x, float y) {
         worldX = x;
         worldY = y;
+    }
+
+
+
+    public static void setMapDimensions(float x, float y) {
+        dimensionX = x;
+        dimensionY = y;
+    }
+
+    public Vector2f getMapDimensions() {
+        return new Vector2f(Math.abs(dimensionX),Math.abs(dimensionY));
     }
 
     public static float getWorldVariableX(float x) {

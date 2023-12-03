@@ -5,18 +5,26 @@ import doctrina.CollidableRepository;
 import doctrina.Direction;
 import doctrina.MovableEntity;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.geom.AffineTransform;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 public class Bullet extends MovableEntity {
 
     private final Direction playerDirection;
+    private static final String SPRITE_PATH = "images/bulletmini.png";
+    private Image image;
 
 
     public Bullet(Player player) {
-        setSpeed(5);
+        setSpeed(7);
         playerDirection = player.getDirection();
+        load();
         initialize(player);
         CollidableRepository.getInstance().registerEntity(this);
+
     }
 
     @Override
@@ -43,29 +51,60 @@ public class Bullet extends MovableEntity {
 
     @Override
     public void draw(Canvas canvas) {
-        canvas.drawRectangle(this, Color.YELLOW);
+        Graphics2D g2d = canvas.getGraphics();
+
+        AffineTransform originalTransform = g2d.getTransform();
+
+
+        double rotationAngle = 0.0;
+        switch (playerDirection) {
+            case RIGHT:
+                rotationAngle =  Math.PI / 2;
+                break;
+            case LEFT:
+                rotationAngle = -Math.PI / 2;
+                break;
+            case DOWN:
+                rotationAngle = Math.PI;
+                break;
+            case UP:
+                rotationAngle = 0.0;
+                break;
+        }
+        g2d.rotate(rotationAngle, x + getWidth() / 2, y + getHeight() / 2);
+        g2d.drawImage(image, x, y, null);
+        g2d.setTransform(originalTransform);
     }
+
 
     private void initialize(Player player) {
         if (playerDirection == Direction.RIGHT) {
             teleport((int) player.position.x + player.getWidth() + 1,
                     (int) player.position.y + 15 - 2);
-            setDimension(8, 4);
+            setDimension(4, 2);
         } else if (playerDirection == Direction.LEFT) {
             teleport((int) player.position.x - 9, (int) player.position.y + 15 - 2);
-            setDimension(8, 4);
+            setDimension(4, 2);
         } else if (playerDirection == Direction.DOWN) {
             teleport((int) player.position.x + 15 - 2,
                     (int) player.position.y + player.getHeight() + 1);
-            setDimension(4, 8);
+            setDimension(4, 2);
         } else if (playerDirection == Direction.UP) {
             teleport((int) player.position.x + 15 - 2, (int) player.position.y - 9);
-            setDimension(4, 8);
+            setDimension(4, 2);
         }
     }
 
     public void enableDebug() {
         System.out.println("Player Direction: " + playerDirection);
+    }
+
+    private void load() {
+        try {
+            image = ImageIO.read(this.getClass().getClassLoader().getResourceAsStream(SPRITE_PATH));
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
 

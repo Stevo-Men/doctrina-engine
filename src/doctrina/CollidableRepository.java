@@ -45,4 +45,6 @@ public class CollidableRepository implements Iterable<StaticEntity> {
     public Iterator<StaticEntity> iterator() {
         return registeredEntities.iterator();
     }
+
+
 }

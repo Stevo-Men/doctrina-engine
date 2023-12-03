@@ -6,7 +6,9 @@ public class Canvas {
 
     private final Graphics2D graphics;
 
-
+    public Graphics2D getGraphics() {
+        return graphics;
+    }
 
     public Canvas(Graphics2D graphics) {
         this.graphics = graphics;
@@ -44,8 +46,6 @@ public class Canvas {
     public void drawImage(Image image, int x, int y) {
         graphics.drawImage(image,x,y,null);
     }
-
-
 
 
 
