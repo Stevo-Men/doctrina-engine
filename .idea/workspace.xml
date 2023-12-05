@@ -4,32 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : Ennemies Animation">
-      <change afterPath="$PROJECT_DIR$/src/project/HUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Canvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Canvas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/RenderingEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/RenderingEngine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/StaticEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/StaticEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/Bullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/Bullet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/Player.class" afterDir="false" />
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Refactor : DeadCode">
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/Size.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/projectGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/projectGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doctrina/AnimatedEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/AnimatedEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doctrina/Camerav2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Camerav2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doctrina/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Canvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doctrina/GameObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doctrina/RenderingEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/RenderingEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doctrina/StaticEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/StaticEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/math/AABB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/AABB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Bullet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/Position.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/Size.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/Target.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/projectGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/projectGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,15 +207,7 @@
       <workItem from="1701630533502" duration="31279000" />
       <workItem from="1701701044288" duration="13119000" />
       <workItem from="1701723297195" duration="2900000" />
-      <workItem from="1701746432365" duration="938000" />
-    </task>
-    <task id="LOCAL-00002" summary="Ball is bouncing">
-      <option name="closed" value="true" />
-      <created>1695752291912</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1695752291912</updated>
+      <workItem from="1701746432365" duration="1261000" />
     </task>
     <task id="LOCAL-00003" summary="Refactoring : Ball Class">
       <option name="closed" value="true" />
@@ -620,7 +593,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701640040833</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Refactor : DeadCode">
+      <option name="closed" value="true" />
+      <created>1701747598750</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1701747598751</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -638,7 +619,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refractor : Extract abstract StaticEntity" />
     <MESSAGE value="Refractor : Extract drawRectangle" />
     <MESSAGE value="Feature : TankGame" />
     <MESSAGE value="Feature : implement collider repository" />
@@ -663,7 +643,8 @@
     <MESSAGE value="Refactor : Camera Version2" />
     <MESSAGE value="Feature : Bullets &amp; Enemies" />
     <MESSAGE value="Feature : Ennemies Animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature : Ennemies Animation" />
+    <MESSAGE value="Refactor : DeadCode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor : DeadCode" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

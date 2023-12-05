@@ -18,8 +18,6 @@ public class Camerav2 extends StaticEntity {
 
 
 
-
-
     public Camerav2(AABB collisionCam) {
         this.collisionCam = collisionCam;
         screenWidth = 850;

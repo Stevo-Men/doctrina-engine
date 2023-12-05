@@ -11,7 +11,6 @@ import java.io.IOException;
 public class World {
     public static final String MAP_PATH = "images/map_1_XL.png";
     private Image background;
-    private Camerav2 camerav2;
     private Player player;
     private GamePad gamePad;
     public Vector2f map;
