@@ -9,29 +9,18 @@ import java.awt.*;
 import java.io.IOException;
 
 public class World {
-
     public static final String MAP_PATH = "images/map_1_XL.png";
     private Image background;
     private Camerav2 camerav2;
     private Player player;
-    private Frame frame;
     private GamePad gamePad;
-    boolean nearLeftBorder;
     public Vector2f map;
-    private Screen screen;
-
-
 
 
     public World() {
         player = new Player(gamePad);
         load();
-        map.setMapDimensions(background.getWidth(null),background.getHeight(null));
-        map = new Vector2f();
-        map.setVectorMap(400, 300);
-        screen = new Screen();
-
-      //  player.setPosition(-1650, -2300);
+        map.setMapDimensions(3200,3200);
     }
 
 
@@ -46,31 +35,17 @@ public class World {
 
 
     public void draw(Canvas canvas, Camerav2 camerav2) {
-        int startX = (int) (player.position.getWorldVariables().x += camerav2.getPos().x);
-        int startY = (int) (player.position.getWorldVariables().y += camerav2.getPos().y);
+        int worldX = 0;
+        int worldY = 0;
+        int screenX = worldX - player.worldX + player.screenX;
+        int screenY = worldY - player.worldY + player.screenY;
 
-        int secondX = (int) (startX);
-        int secondY = (int) (startY);
+        canvas.drawImage(background, screenX - (int) camerav2.getPos().x, (int) (screenY - camerav2.getPos().y));
 
-
-        //canvas.drawImage(background, (int) (player.position.getWorldVariables().x - secondX), (int) player.position.getWorldVariables().y - secondY);
-        canvas.drawImage(background, (int) (player.position.getWorldVariables().x - secondX), (int) player.position.getWorldVariables().y - secondY);
     }
-
-
-
-
-
-
-
 
     public void update() {
 
 
-
     }
-
-
-
-
 }

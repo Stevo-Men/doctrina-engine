@@ -1,5 +1,7 @@
 package doctrina;
 import math.Vector2f;
+import project.Enemy;
+import project.Player;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -15,8 +17,7 @@ public abstract class AnimatedEntity extends MovableEntity {
     protected static final int ANIMATION_SPEED = 8;
     protected int currentAnimationFrame = 1;
     protected int nextFrame = ANIMATION_SPEED;
-    protected int worldX;
-    protected int worldY;
+
     protected int cooldown = 0;
 
 
@@ -27,7 +28,6 @@ public abstract class AnimatedEntity extends MovableEntity {
         super();
         this.width = width;  // Set width
         this.height = height;  // Set height
-        //position = new Vector2f(this.position.x, this.position.y);
         loadSpriteSheet(spritePath);
         loadAnimationFrames();
     }
@@ -73,7 +73,7 @@ public abstract class AnimatedEntity extends MovableEntity {
                 if (currentAnimationFrame >= directionFramesMap.get(getDirection()).length) {
                     currentAnimationFrame = 0;
                 }
-                nextFrame = ANIMATION_SPEED*2;
+                nextFrame = ANIMATION_SPEED;
             }
         } else {
             currentAnimationFrame = 1;
@@ -82,25 +82,25 @@ public abstract class AnimatedEntity extends MovableEntity {
 
 
 
-    protected void drawPlayerImage(Canvas canvas) {
+    protected void drawPlayerImage(Canvas canvas, Player player) {
         Direction direction = getDirection();
         Image[] frames = directionFramesMap.get(direction);
 
 
         if (frames != null) {
-            canvas.drawImage(frames[currentAnimationFrame], (int) this.position.x, (int) this.position.y);
+            canvas.drawImage(frames[currentAnimationFrame], player.screenX, player.screenY);
           //  System.out.println("Player Coordinates: x = " + (int) this.position.x + ", y = " + (int) this.position.y);
 
         }
     }
 
-    protected void drawEnemyImage(Canvas canvas) {
+    protected void drawEnemyImage(Canvas canvas, Enemy enemy) {
         Direction direction = getDirection();
         Image[] frames = directionFramesMap.get(direction);
 
 
         if (frames != null) {
-            canvas.drawImage(frames[currentAnimationFrame],  this.x,  this.y);
+            canvas.drawImage(frames[currentAnimationFrame], enemy.screenX ,  enemy.screenY);
             //  System.out.println("Player Coordinates: x = " + (int) this.position.x + ", y = " + (int) this.position.y);
 
         }

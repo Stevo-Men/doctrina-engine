@@ -10,32 +10,30 @@ import java.awt.*;
 public class Player extends AnimatedEntity {
 
     private static final String SPRITE_PATH = "images/player2.png";
-
-    private Camera camera;
     private int cooldown = 0;
-    protected int maxHealth = 100;
+    protected final int maxHealth = 100;
     protected int health = 100;
-    protected int damage = 25;
-
-    public boolean xCol = false;
-    public boolean yCol = false;
+    public final int screenX;
+    public final int screenY;
     private MovementController movementController;
-    private Screen screen;
-    private Camerav2 camerav2;
-
 
 
 
     public Player(MovementController controller) {
         super(32, 32, 3, SPRITE_PATH);
-        position.x = 400;
-        position.y = 300;
-        worldX = 400;
-        worldY = 300;
+        worldX = 1500;
+        worldY = 1500;
+        screenX = 400;
+        screenY = 300;
+
+
         setDimension(32, 32);
         setSpeed(1);
         this.movementController = controller;
-
+        bounds.setWidth(32);
+        bounds.setHeight(32);
+        bounds.setXOffset(16);
+        bounds.setYOffset(40);
 
     }
 
@@ -59,31 +57,22 @@ public class Player extends AnimatedEntity {
         if (cooldown < 0) {
             cooldown = 0;
         }
-
-        //System.out.println("Position + " + "X" + getPos().getWorldVariables().x + "Y" + getPos().getWorldVariables().y );
-
     }
 
     @Override
     public void draw(Canvas canvas) {
         update();
+        cooldownBar(canvas);
+        drawPlayerImage(canvas, this);
 
-
-        int cooldownWidth = cooldown * width / 50;
-        canvas.drawRectangle((int) position.x, (int) (position.y - 5), cooldownWidth, 2, Color.GREEN);
-        if (hasMoved()) {
-            drawHitBox(canvas);
-        }
-        drawPlayerImage(canvas);
 
         if (GameConfig.isDebugEnabled()) {
-            canvas.drawRectangle((int) getPos().x, (int) getPos().y,20,20, Color.RED);
-           System.out.println("PLAYER: X: " + getPos().x + "Y: " + getPos().y);
+            debugInfo(canvas);
         }
+        canvas.drawString("World: X: " + worldX + "Y: " + worldY,screenX,screenY,Color.RED);
     }
 
     private void moveWithController() {
-        // Update the player's position based on the controller's input
         if (movementController.isRightPressed()) {
             move(Direction.RIGHT);
         } else if (movementController.isLeftPressed()) {
@@ -104,6 +93,15 @@ public class Player extends AnimatedEntity {
         directionFramesMap.put(Direction.UP, loadFrames(96));
     }
 
+    private void debugInfo(Canvas canvas) {
+        canvas.drawRectangle((int) getPos().x, (int) getPos().y,20,20, Color.RED);
+        System.out.println("World: X: " + worldX + "Y: " + worldY);
+        System.out.println("Screen: X: " + screenX + "Y: " + screenY);
+    }
 
+    private void cooldownBar(Canvas canvas) {
+        int cooldownWidth = cooldown * width / 50;
+        canvas.drawRectangle(screenX, (screenY - 5), cooldownWidth, 2, Color.GREEN);
+    }
 
 }

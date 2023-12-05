@@ -18,13 +18,9 @@ public class projectGame extends Game {
     private ArrayList<Obstacle> obstacles;
     private World world;
     private Tree tree;
-    private Camera camera;
-    private Canvas canvas;
-    private Enemy enemy;
+    private HUD hud;
     private int soundCooldown;
-    private static final String MAP_PATH = "images/map_1_test.png";
     private ArrayList<Enemy> enemies;
-
     private Camerav2 camerav2;
     private Screen screen;
 
@@ -32,28 +28,18 @@ public class projectGame extends Game {
 
     @Override
     protected void initialize() {
-       GameConfig.enableDebug();
+       // GameConfig.enableDebug();
         gamePad = new GamePad();
         player = new Player(gamePad);
+        hud = new HUD();
         world = new World();
         screen = new Screen();
-        camerav2 = new Camerav2(new AABB(new Vector2f(player.x, player.y), 800, 600));
-
-
-        player.teleport(200, 200);
-
-        //  player.teleport(100, 100);
+        camerav2 = new Camerav2(new AABB(new Vector2f(player.screenX, player.screenY), 800, 600));
         bullets = new ArrayList<>();
-        world = new World();
         tree = new Tree(300, 350);
         obstacles = new ArrayList<>();
         enemies = new ArrayList<>();
-        enemy = new Enemy();
-        enemies.add(new Enemy());
-
-
-
-
+        enemies.add(new Enemy(1600,1600));
 
 
 
@@ -68,7 +54,7 @@ public class projectGame extends Game {
             e.printStackTrace();
         }
 
-        // RenderingEngine.getInstance().getScreen().toggleFullscreen();
+        RenderingEngine.getInstance().getScreen().toggleFullscreen();
         //RenderingEngine.getInstance().getScreen().hideCursor();
     }
 
@@ -78,15 +64,9 @@ public class projectGame extends Game {
         if (gamePad.isQuitPressed()) {
             stop();
         }
-
-
-
+        world.update();
         player.update();
         camerav2.update(player);
-
-
-
-
 
         if (player.getY() < tree.getY() + 52) {
             tree.blockadeFromTop();
@@ -111,7 +91,8 @@ public class projectGame extends Game {
 
 
         for (Enemy enemy : enemies) {
-            enemy.update();
+            enemy.update(player,camerav2);
+
         }
 
         ArrayList<StaticEntity> killedElements = new ArrayList<>();
@@ -121,12 +102,13 @@ public class projectGame extends Game {
             for (Enemy enemy : enemies) {
                 if (bullet.hitBoxIntersectWith(enemy)) {
                     killedElements.add(bullet);
-                    killedElements.add(enemy);
+                    enemy.getShoot();
+                    if (enemy.life <= 0) {
+                        killedElements.add(enemy);
+                    }
                 }
             }
         }
-
-
 
         for (StaticEntity killedElement : killedElements) {
             if (killedElement instanceof Enemy) {
@@ -137,18 +119,13 @@ public class projectGame extends Game {
             }
         }
         CollidableRepository.getInstance().unregisterEntities(killedElements);
-
     }
 
     @Override
     protected void draw(Canvas canvas) {
-
         world.draw(canvas,camerav2);
         player.draw(canvas);
-
-
-
-
+        hud.draw(canvas);
 
 
         for (Enemy enemy : enemies) {

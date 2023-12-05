@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : Bullets &amp; Enemies">
+    <list default="true" id="b79429b7-a7dd-4572-960c-3db0d82a7ec1" name="Changes" comment="Feature : Ennemies Animation">
+      <change afterPath="$PROJECT_DIR$/src/project/HUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Canvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/Canvas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/MovableEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/RenderingEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/RenderingEngine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/StaticEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/doctrina/StaticEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/Bullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/Bullet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/doctrina-engine/project/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/doctrina-engine/project/World.class" afterDir="false" />
@@ -14,11 +20,11 @@
       <change beforePath="$PROJECT_DIR$/src/doctrina/AnimatedEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/AnimatedEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/doctrina/Camerav2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Camerav2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/doctrina/Canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/Canvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doctrina/CollidableRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/CollidableRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doctrina/GameObject.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/MovableEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doctrina/RenderingEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/RenderingEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/doctrina/StaticEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctrina/StaticEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/math/AABB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/AABB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/math/Vector2f.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/Vector2f.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Bullet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/Player.java" afterDir="false" />
@@ -217,15 +223,10 @@
       <workItem from="1701376267287" duration="12229000" />
       <workItem from="1701450702032" duration="29333000" />
       <workItem from="1701559654355" duration="4788000" />
-      <workItem from="1701630533502" duration="9302000" />
-    </task>
-    <task id="LOCAL-00001" summary="Preparation de la fenetre de jeu">
-      <option name="closed" value="true" />
-      <created>1695750463995</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1695750463995</updated>
+      <workItem from="1701630533502" duration="31279000" />
+      <workItem from="1701701044288" duration="13119000" />
+      <workItem from="1701723297195" duration="2900000" />
+      <workItem from="1701746432365" duration="938000" />
     </task>
     <task id="LOCAL-00002" summary="Ball is bouncing">
       <option name="closed" value="true" />
@@ -611,7 +612,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701415402893</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Feature : Ennemies Animation">
+      <option name="closed" value="true" />
+      <created>1701640040833</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1701640040833</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -629,7 +638,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refractor : Auto method gamePad listener" />
     <MESSAGE value="Refractor : Extract abstract StaticEntity" />
     <MESSAGE value="Refractor : Extract drawRectangle" />
     <MESSAGE value="Feature : TankGame" />
@@ -654,18 +662,8 @@
     <MESSAGE value="Feature : Shooting from player" />
     <MESSAGE value="Refactor : Camera Version2" />
     <MESSAGE value="Feature : Bullets &amp; Enemies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature : Bullets &amp; Enemies" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/project/projectGame.java</url>
-          <line>113</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Feature : Ennemies Animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature : Ennemies Animation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

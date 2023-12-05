@@ -16,6 +16,7 @@ public class Bullet extends MovableEntity {
     private final Direction playerDirection;
     private static final String SPRITE_PATH = "images/bulletmini.png";
     private Image image;
+    protected int damage = 25;
 
 
     public Bullet(Player player) {
@@ -24,7 +25,6 @@ public class Bullet extends MovableEntity {
         load();
         initialize(player);
         CollidableRepository.getInstance().registerEntity(this);
-
     }
 
     @Override
@@ -39,13 +39,12 @@ public class Bullet extends MovableEntity {
             y -= getSpeed();
         }
 
-
-        if (x >= 820 || x < 0) {
+     /*   if (x >= 820 || x < 0) {
             x = -20;
         }
         if (y >= 620 || y < 0) {
             y = -20;
-        }
+        }*/
     }
 
 
@@ -54,7 +53,6 @@ public class Bullet extends MovableEntity {
         Graphics2D g2d = canvas.getGraphics();
 
         AffineTransform originalTransform = g2d.getTransform();
-
 
         double rotationAngle = 0.0;
         switch (playerDirection) {
@@ -79,24 +77,20 @@ public class Bullet extends MovableEntity {
 
     private void initialize(Player player) {
         if (playerDirection == Direction.RIGHT) {
-            teleport((int) player.position.x + player.getWidth() + 1,
-                    (int) player.position.y + 15 - 2);
+            teleport(player.screenX + player.getWidth() + 1,
+                    player.screenY + 15 - 2);
             setDimension(4, 2);
         } else if (playerDirection == Direction.LEFT) {
-            teleport((int) player.position.x - 9, (int) player.position.y + 15 - 2);
+            teleport(player.screenX - 9, player.screenY + 15 - 2);
             setDimension(4, 2);
         } else if (playerDirection == Direction.DOWN) {
-            teleport((int) player.position.x + 15 - 2,
-                    (int) player.position.y + player.getHeight() + 1);
+            teleport(player.screenX + 15 - 2,
+                    (player.screenY + player.getHeight() + 1));
             setDimension(4, 2);
         } else if (playerDirection == Direction.UP) {
-            teleport((int) player.position.x + 15 - 2, (int) player.position.y - 9);
+            teleport(player.screenX + 15 - 2, player.screenY - 9);
             setDimension(4, 2);
         }
-    }
-
-    public void enableDebug() {
-        System.out.println("Player Direction: " + playerDirection);
     }
 
     private void load() {

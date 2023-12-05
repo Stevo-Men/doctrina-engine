@@ -11,6 +11,10 @@ public class RenderingEngine {
     private JPanel panel;
     private BufferedImage bufferedImage;
     private Screen screen;
+    public final int maxWorldCol = 3200;
+    public final int maxWorldRow = 3200;
+    public final int maxWorldWidth = 3200;
+    public final int maxWorldHeight = 3200;
 
     public static RenderingEngine getInstance() {
         if (instance == null) {

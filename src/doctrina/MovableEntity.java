@@ -11,8 +11,11 @@ public abstract class MovableEntity extends StaticEntity {
     private  Collision collision;
     public int lastX = Integer.MAX_VALUE;
     public int lastY = Integer.MIN_VALUE;
+    public int lastEnemyX = Integer.MAX_VALUE;
+    public int lastEnemyY = Integer.MIN_VALUE;
     private boolean moved = false;
-
+    public int worldX;
+    public int worldY;
 
 
 
@@ -28,14 +31,12 @@ public abstract class MovableEntity extends StaticEntity {
 
     public void update() {
         moved = false;
-
     }
 
 
 
     public MovableEntity() {
         collision = new Collision(this);
-        position = new Vector2f(0, 0);
     }
 
     public int getLastX() {
@@ -48,20 +49,20 @@ public abstract class MovableEntity extends StaticEntity {
 
     public void move() {
         int allowedSpeed = collision.getAllowedSpeed(direction);
-        this.position.x += direction.calculateVelocityX(allowedSpeed);
-        this.position.y += direction.calculateVelocityY(allowedSpeed);
-        moved = (position.x != lastX || position.y != lastY);
-        lastX = (int) position.x;
-        lastY = (int) position.y;
+        this.worldX += direction.calculateVelocityX(allowedSpeed);
+        this.worldY += direction.calculateVelocityY(allowedSpeed);
+        moved = (worldX != lastX || worldY != lastY);
+        lastX = worldX;
+        lastY = worldY;
     }
 
     public void moveEnemy() {
         int allowedSpeed = collision.getAllowedSpeed(direction);
-        this.x += direction.calculateVelocityX(allowedSpeed);
-        this.y += direction.calculateVelocityY(allowedSpeed);
-        moved = (x != lastX || y != lastY);
-        lastX = x;
-        lastY = y;
+        worldX += direction.calculateVelocityX(allowedSpeed);
+        worldY += direction.calculateVelocityY(allowedSpeed);
+        moved = (worldX != lastEnemyX || worldY != lastEnemyY);
+        lastEnemyX = worldX;
+        lastEnemyY = worldY;
     }
 
 
